@@ -74,6 +74,7 @@ body.presenting .product-slide .product-info-card > .label,
 body.presenting .product-slide .product-info-card > div > .label { display:none!important; }
 body.presenting .product-image-grid .editable-image:not(:has(img)) { display:none!important; }
 body.presenting .product-image-grid { grid-template-rows:none; grid-auto-rows:1fr; align-content:center; }
+body.exporting .nav, body.exporting .arrow, body.exporting .edit-toolbar, body.exporting .edit-status { display:none!important; }
 .placeholder { border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }
 .rank-badge { display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }
 .metric-strip { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }
@@ -99,6 +100,7 @@ body.presenting .product-image-grid { grid-template-rows:none; grid-auto-rows:1f
   <div class="edit-extra">
     <button id="saveBtn" type="button">Save</button>
     <button id="downloadHtmlBtn" type="button">Download HTML</button>
+    <button id="downloadPptxBtn" type="button">Download PPTX</button>
     <button id="exportBtn" type="button">Export</button>
     <button id="importBtn" type="button">Import</button>
     <button id="resetBtn" type="button">Reset</button>
@@ -839,6 +841,73 @@ function downloadEditedHtml() {
   a.click();
   URL.revokeObjectURL(a.href);
 }
+function loadExternalScript(src) {
+  return new Promise((resolve, reject) => {
+    const existing = [...document.scripts].find(s => s.src === src);
+    if(existing) { existing.dataset.loaded === 'true' ? resolve() : existing.addEventListener('load', resolve, {once:true}); return; }
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = () => { script.dataset.loaded = 'true'; resolve(); };
+    script.onerror = () => reject(new Error('Cannot load ' + src));
+    document.head.appendChild(script);
+  });
+}
+async function downloadPptx() {
+  saveEdits(false);
+  const btn = document.getElementById('downloadPptxBtn');
+  const oldText = btn ? btn.textContent : '';
+  try {
+    if(btn) { btn.textContent = 'Building PPTX...'; btn.disabled = true; }
+    await loadExternalScript('https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js');
+    await loadExternalScript('https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js');
+    const PptxGen = window.pptxgenjs || window.pptxgen;
+    if(!window.html2canvas || !PptxGen) throw new Error('PPTX export libraries are not ready.');
+    const wasPresenting = document.body.classList.contains('presenting');
+    const wasEditing = editMode;
+    if(wasEditing) setEditMode(false);
+    document.body.classList.add('presenting','exporting');
+    const pptx = new PptxGen();
+    pptx.layout = 'LAYOUT_WIDE';
+    pptx.author = 'EDRA';
+    pptx.subject = 'EDRA Import and Sell-out Dashboard';
+    pptx.title = 'EDRA Import and Sell-out Performance';
+    const originalIndex = current;
+    const slides = [...document.querySelectorAll('.slide')];
+    const deck = el('slides');
+    const oldTransition = deck.style.transition;
+    deck.style.transition = 'none';
+    for(let i=0;i<slides.length;i++) {
+      if(btn) btn.textContent = `PPTX ${i+1}/${slides.length}`;
+      goTo(i);
+      await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+      const canvas = await html2canvas(slides[i], {
+        backgroundColor: '#050505',
+        scale: 1.65,
+        useCORS: true,
+        allowTaint: true,
+        logging: false,
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight
+      });
+      const img = canvas.toDataURL('image/jpeg', .88);
+      const s = pptx.addSlide();
+      s.background = { color: '050505' };
+      s.addImage({ data: img, x: 0, y: 0, w: 13.333, h: 7.5 });
+    }
+    goTo(originalIndex);
+    deck.style.transition = oldTransition;
+    if(!wasPresenting) document.body.classList.remove('presenting');
+    document.body.classList.remove('exporting');
+    if(wasEditing) setEditMode(true);
+    await pptx.writeFile({ fileName: 'edra-dashboard-slides.pptx' });
+  } catch(err) {
+    alert('Chưa xuất được PPTX. Hãy kiểm tra mạng rồi thử lại, vì nút này cần tải thư viện xuất PPTX lần đầu. ' + (err && err.message ? err.message : ''));
+  } finally {
+    document.body.classList.remove('exporting');
+    if(btn) { btn.textContent = oldText || 'Download PPTX'; btn.disabled = false; }
+  }
+}
 document.getElementById('editImport').addEventListener('change', e=>{
   const file = e.target.files && e.target.files[0];
   if(!file) return;
@@ -870,6 +939,7 @@ function bindEditorButtons() {
   bind('editToggle', toggleEditMode);
   bind('saveBtn', () => saveEdits());
   bind('downloadHtmlBtn', downloadEditedHtml);
+  bind('downloadPptxBtn', downloadPptx);
   bind('exportBtn', exportEdits);
   bind('importBtn', () => document.getElementById('editImport').click());
   bind('resetBtn', clearEdits);
