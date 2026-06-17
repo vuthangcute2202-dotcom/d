@@ -80,6 +80,12 @@ body.editing .editable-image {{ cursor:pointer; border-color:var(--orange); back
 .spec-box b {{ color:var(--orange); }}
 .spec-box div {{ margin-top:6px; padding:6px 10px; border-radius:10px; background:rgba(255,255,255,.035); }}
 body.editing .spec-box {{ padding-bottom:48px; }}
+body.presenting .product-slide .sub,
+body.presenting .product-slide .foot,
+body.presenting .product-slide .product-info-card > .label,
+body.presenting .product-slide .product-info-card > div > .label {{ display:none!important; }}
+body.presenting .product-image-grid .editable-image:not(:has(img)) {{ display:none!important; }}
+body.presenting .product-image-grid {{ grid-template-rows:none; grid-auto-rows:1fr; align-content:center; }}
 .placeholder {{ border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }}
 .rank-badge {{ display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }}
 .metric-strip {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }}
@@ -674,6 +680,41 @@ function buildProductSlides() {{
     slideNo += 1;
     }});
   }});
+
+  const template=document.createElement('section'); template.className='slide product-slide product-template-slide';
+  template.innerHTML = `<div class="content">
+    <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>${{String(slideNo).padStart(2,'0')}} · Add Product Template</div></div>
+    <div><h1>NEW PRODUCT CODE</h1><p class="sub">Editable template slide for adding another product later. Replace text, upload only the images you need, then press Present to hide empty image boxes.</p></div>
+    <div class="body two product-highlight-body">
+      <div class="product-image-grid">
+        ${{[1,2,3,4].map(n=>`<div class="placeholder editable-image" data-image-key="custom-product-${{n}}" title="Enable Edit mode, then click to add product photo">Product Image ${{n}}<br><span>Add product photo here</span></div>`).join('')}}
+      </div>
+      <div class="card glow-card product-info-card">
+        <div class="label">Product Name</div>
+        <h2 class="product-title-line">Tên sản phẩm / mô tả ngắn</h2>
+        <div class="mini-metric product-type-chip"><div class="label">Type</div><b>Type</b></div>
+        <div style="min-height:0">
+          <div class="label">Specifications / Thông số</div>
+          <div class="spec-box editable-copy" style="margin-top:10px">
+            <b>THÔNG SỐ & CHI TIẾT</b>
+            <div>- Tên sản phẩm:</div>
+            <div>- Màu sắc:</div>
+            <div>- Kích thước / Layout:</div>
+            <div>- Tấm nền / Switch / Kết nối:</div>
+            <div>- Độ phân giải / DPI / Tần số:</div>
+            <div>- Tính năng chính:</div>
+            <div>- Cổng kết nối / Phụ kiện:</div>
+            <div>- Bảo hành / Ghi chú:</div>
+            <div>- Giá bán / Phân khúc:</div>
+            <div>- Điểm nổi bật khi giới thiệu:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Editable extra product slide</span><span>${{String(slideNo).padStart(2,'0')}}</span></div>
+  </div>`;
+  main.appendChild(template);
+  slideNo += 1;
 }}
 function render() {{
   el('kpi2025').textContent=short(DATA.totals.total_2025); el('kpi2026').textContent=short(DATA.totals.total_2026_5m);
