@@ -56,6 +56,9 @@ body.editing .editable-image { cursor:pointer; border-color:var(--orange); backg
 .product-image-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:14px; min-height:470px; }
 .product-image-grid .placeholder { min-height:0; height:100%; font-size:16px; padding:16px; }
 .product-image-grid .placeholder span { font-size:12px; color:var(--muted); }
+.spec-box { border:1px solid var(--line); border-radius:18px; padding:16px; background:#0b0b10; min-height:260px; color:#f8fafc; font-size:17px; line-height:1.42; }
+.spec-box b { color:var(--orange); }
+.spec-box div { margin-top:8px; padding:6px 10px; border-radius:10px; background:rgba(255,255,255,.035); }
 .placeholder { border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }
 .rank-badge { display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }
 .metric-strip { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }
@@ -578,7 +581,24 @@ function buildProductSlides() {
         <div class="product-image-grid">
           ${[1,2,3,4].map(n=>`<div class="placeholder editable-image" data-image-key="${r.item}-${n}" title="Enable Edit mode, then click to add product photo">Product Image ${n}<br><span>Add product photo here</span></div>`).join('')}
         </div>
-        <div class="card glow-card"><div class="label">Product Name</div><h2 style="margin-top:10px">${r.product_name}</h2><div class="metric-strip" style="grid-template-columns:1fr 1fr;margin-top:28px"><div class="mini-metric"><div class="label">Type</div><b>${r.category}</b></div><div class="mini-metric"><div class="label">Best-seller Source</div><b>Slide 22</b></div></div><div style="margin-top:24px;border-top:1px solid var(--line);padding-top:18px"><div class="label">Appears In</div><div style="display:grid;gap:9px;margin-top:12px">${r.periods.map(p=>`<div style="border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:#0b0b10;font-weight:900;color:var(--orange)">${p}</div>`).join('')}</div></div></div>
+        <div class="card glow-card">
+          <div class="label">Product Name</div>
+          <h2 style="margin-top:10px">${r.product_name}</h2>
+          <div class="metric-strip" style="grid-template-columns:.8fr 1.2fr;margin-top:24px">
+            <div class="mini-metric"><div class="label">Type</div><b>${r.category}</b></div>
+            <div class="mini-metric"><div class="label">Sell-out Rank</div><b>${r.periods.join(' · ')}</b></div>
+          </div>
+          <div style="margin-top:18px">
+            <div class="label">Specifications / Thông số</div>
+            <div class="spec-box editable-copy" style="margin-top:10px">
+              <b>Nhập thông số sản phẩm tại đây</b>
+              <div>- Màu sắc:</div>
+              <div>- Kích thước / Layout:</div>
+              <div>- Tính năng chính:</div>
+              <div>- Bảo hành / Ghi chú:</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="foot"><span>Product slide from slide 22 best-seller groups</span><span>${String(slideNo).padStart(2,'0')}</span></div>
     </div>`;
@@ -613,7 +633,7 @@ function loadEditStore() {
   editStore.images = editStore.images || {};
 }
 function editableTextNodes() {
-  return [...document.querySelectorAll('.slide h1,.slide h2,.slide .sub,.slide .note,.slide .label,.slide .foot span,.slide .mini-metric b,.slide .product-preview-item b')];
+  return [...document.querySelectorAll('.slide h1,.slide h2,.slide .sub,.slide .note,.slide .label,.slide .foot span,.slide .mini-metric b,.slide .product-preview-item b,.slide .editable-copy')];
 }
 function assignEditKeys() {
   editableTextNodes().forEach(node=>{
