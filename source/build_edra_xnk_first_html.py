@@ -65,6 +65,9 @@ body.presenting .edit-toolbar, body.presenting .edit-status {{ display:none!impo
 body.editing [contenteditable="true"] {{ outline:1px dashed rgba(255,106,0,.65); outline-offset:3px; border-radius:8px; cursor:text; }}
 body.editing .editable-image {{ cursor:pointer; border-color:var(--orange); background:rgba(255,106,0,.06); }}
 .editable-image img {{ width:100%; height:100%; object-fit:contain; display:block; border-radius:18px; }}
+.product-image-grid {{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:14px; min-height:470px; }}
+.product-image-grid .placeholder {{ min-height:0; height:100%; font-size:16px; padding:16px; }}
+.product-image-grid .placeholder span {{ font-size:12px; color:var(--muted); }}
 .placeholder {{ border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }}
 .rank-badge {{ display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }}
 .metric-strip {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }}
@@ -584,7 +587,9 @@ function buildProductSlides() {{
       <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>${{String(slideNo).padStart(2,'0')}} · ${{groupLabel[g.category]}} Highlight</div></div>
       <div><h1>${{r.item}}</h1><p class="sub">${{groupLabel[g.category]}} product highlight generated from the exact best-seller codes shown on slide 22. Image area is intentionally left blank for product photo insertion.</p></div>
       <div class="body two">
-        <div class="placeholder editable-image" data-image-key="${{r.item}}" title="Enable Edit mode, then click to add product photo" style="min-height:470px;font-size:22px">Product Image Placeholder<br><span style="font-size:14px;color:var(--muted)">Add product photo here later</span></div>
+        <div class="product-image-grid">
+          ${{[1,2,3,4].map(n=>`<div class="placeholder editable-image" data-image-key="${{r.item}}-${{n}}" title="Enable Edit mode, then click to add product photo">Product Image ${{n}}<br><span>Add product photo here</span></div>`).join('')}}
+        </div>
         <div class="card glow-card"><div class="label">Product Name</div><h2 style="margin-top:10px">${{r.product_name}}</h2><div class="metric-strip" style="grid-template-columns:1fr 1fr;margin-top:28px"><div class="mini-metric"><div class="label">Type</div><b>${{r.category}}</b></div><div class="mini-metric"><div class="label">Best-seller Source</div><b>Slide 22</b></div></div><div style="margin-top:24px;border-top:1px solid var(--line);padding-top:18px"><div class="label">Appears In</div><div style="display:grid;gap:9px;margin-top:12px">${{r.periods.map(p=>`<div style="border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:#0b0b10;font-weight:900;color:var(--orange)">${{p}}</div>`).join('')}}</div></div></div>
       </div>
       <div class="foot"><span>Product slide from slide 22 best-seller groups</span><span>${{String(slideNo).padStart(2,'0')}}</span></div>
