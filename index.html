@@ -762,6 +762,16 @@ document.addEventListener('input', e=>{
   const editable = e.target.closest && e.target.closest('[data-edit-key]');
   if(editable) saveEdits(false);
 });
+document.addEventListener('paste', e=>{
+  if(!editMode) return;
+  const editable = e.target.closest && e.target.closest('[contenteditable="true"]');
+  if(!editable) return;
+  const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+  if(!text) return;
+  e.preventDefault();
+  document.execCommand('insertText', false, text.replace(/\r\n/g, '\n'));
+  saveEdits(false);
+});
 function exportEdits() {
   saveEdits(false);
   const blob = new Blob([JSON.stringify(editStore,null,2)], {type:'application/json'});
