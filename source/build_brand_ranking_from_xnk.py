@@ -1,35 +1,42 @@
 import json
+import unicodedata
 from pathlib import Path
 
 import pandas as pd
 
 
-BASE = Path(r"C:\Users\Admin\Documents\BÁO CÁO HL\phân tích 2026\dữ liệu dùng làm slide")
+ROOT = Path(r"C:\Users\Admin\Documents")
 FILES = {
-    2025: BASE / "edra theo brand 2025.xlsx",
-    2026: BASE / "edra theo brand 2026.xlsx",
+    2025: "edra theo brand 2025.xlsx",
+    2026: "edra theo brand 2026.xlsx",
 }
 OUT = Path("work/analysis/consistent/xnk_brand_ranking.json")
 
-CATEGORY_MAP = {
-    "bàn phím": "Keyboard",
-    "chuột": "Mouse",
+CATEGORY_KEYS = {
+    "ban phim": "Keyboard",
+    "chuot": "Mouse",
     "tai nghe": "Headset",
-    "màn hình": "Monitor",
+    "man hinh": "Monitor",
 }
 
 
-def month_from_header(value):
-    text = str(value).upper()
-    if "THÁNG" not in text:
-        return None
-    digits = "".join(ch for ch in text if ch.isdigit())
-    return int(digits) if digits else None
+def clean_text(value):
+    text = str(value).strip().lower()
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(ch for ch in text if unicodedata.category(ch) != "Mn")
+    return text.replace("đ", "d")
+
+
+def find_file(name):
+    matches = list(ROOT.rglob(name))
+    if not matches:
+        raise FileNotFoundError(name)
+    return matches[0]
 
 
 def category_from_title(title):
-    text = str(title).lower()
-    for key, val in CATEGORY_MAP.items():
+    text = clean_text(title)
+    for key, val in CATEGORY_KEYS.items():
         if key in text:
             return val
     return None
@@ -38,35 +45,40 @@ def category_from_title(title):
 def parse_file(path, year):
     df = pd.read_excel(path, header=None)
     current = None
-    month_cols = {}
+    total_col = None
     rows = []
+
     for _, row in df.iterrows():
         first = row.iloc[0]
         if isinstance(first, str):
-            cat = category_from_title(first)
-            if cat:
-                current = cat
-                month_cols = {}
+            category = category_from_title(first)
+            if category:
+                current = category
+                total_col = None
                 continue
-            if first.strip().upper() == "BRANDS" and current:
-                month_cols = {col: month_from_header(value) for col, value in row.items() if month_from_header(value)}
+
+            if clean_text(first) == "brands" and current:
+                total_col = None
+                for col, value in row.items():
+                    if clean_text(value) == "total":
+                        total_col = col
+                        break
                 continue
-        if current and month_cols and pd.notna(first):
+
+        if current and total_col is not None and pd.notna(first):
             brand = str(first).strip().upper().replace("E-DRA", "EDRA")
             if not brand or brand in ["TOTAL", "NAN"]:
                 continue
-            for col, month in month_cols.items():
-                qty = pd.to_numeric(row.iloc[col], errors="coerce")
-                if pd.notna(qty):
-                    rows.append(
-                        {
-                            "year": year,
-                            "month": int(month),
-                            "category": current,
-                            "brand": brand,
-                            "quantity": float(qty),
-                        }
-                    )
+            qty = pd.to_numeric(row.iloc[total_col], errors="coerce")
+            if pd.notna(qty):
+                rows.append(
+                    {
+                        "year": year,
+                        "category": current,
+                        "brand": brand,
+                        "quantity": float(qty),
+                    }
+                )
     return rows
 
 
@@ -85,10 +97,8 @@ def ranking_payload(group):
 
 def main():
     rows = []
-    for year, path in FILES.items():
-        if not path.exists():
-            raise FileNotFoundError(path)
-        rows.extend(parse_file(path, year))
+    for year, name in FILES.items():
+        rows.extend(parse_file(find_file(name), year))
 
     raw = pd.DataFrame(rows)
     if raw.empty:
