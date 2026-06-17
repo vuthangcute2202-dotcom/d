@@ -65,18 +65,19 @@ body.presenting .edit-toolbar, body.presenting .edit-status {{ display:none!impo
 body.editing [contenteditable="true"] {{ outline:1px dashed rgba(255,106,0,.65); outline-offset:3px; border-radius:8px; cursor:text; }}
 body.editing .editable-image {{ cursor:pointer; border-color:var(--orange); background:rgba(255,106,0,.06); }}
 .editable-image img {{ width:100%; height:100%; object-fit:contain; display:block; border-radius:18px; }}
-.product-highlight-body {{ grid-template-columns:.82fr 1.18fr; gap:18px; }}
-.product-image-grid {{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:12px; min-height:455px; }}
+.product-slide h1 {{ font-size:38px; margin-bottom:2px; }}
+.product-slide .sub {{ font-size:14px; line-height:1.2; max-width:1280px; }}
+.product-highlight-body {{ grid-template-columns:.78fr 1.22fr; gap:18px; min-height:0; }}
+.product-image-grid {{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:12px; min-height:0; height:100%; }}
 .product-image-grid .placeholder {{ min-height:0; height:100%; font-size:15px; padding:14px; }}
 .product-image-grid .placeholder span {{ font-size:12px; color:var(--muted); }}
-.product-info-card {{ display:grid; grid-template-rows:auto auto 1fr; gap:14px; min-height:455px; }}
-.product-title-line {{ margin-top:8px; font-size:27px; line-height:1.16; letter-spacing:-.035em; }}
-.spec-box {{ border:1px solid var(--line); border-radius:20px; padding:18px; background:#0b0b10; min-height:0; height:100%; color:#f8fafc; font-size:16px; line-height:1.35; overflow:auto; }}
+.product-info-card {{ display:grid; grid-template-rows:auto auto auto 1fr; gap:10px; min-height:0; height:100%; }}
+.product-title-line {{ margin-top:6px; font-size:25px; line-height:1.12; letter-spacing:-.035em; }}
+.product-type-chip {{ width:230px; padding:10px 14px; }}
+.product-type-chip b {{ font-size:18px; }}
+.spec-box {{ border:1px solid var(--line); border-radius:20px; padding:18px; background:#0b0b10; min-height:0; height:100%; color:#f8fafc; font-size:15px; line-height:1.28; overflow:auto; }}
 .spec-box b {{ color:var(--orange); }}
-.spec-box div {{ margin-top:7px; padding:6px 10px; border-radius:10px; background:rgba(255,255,255,.035); }}
-.spec-chips {{ display:grid; grid-template-columns:.74fr 1.26fr; gap:10px; }}
-.spec-chips .mini-metric {{ padding:11px 13px; }}
-.spec-chips .mini-metric b {{ font-size:18px; line-height:1.2; }}
+.spec-box div {{ margin-top:6px; padding:6px 10px; border-radius:10px; background:rgba(255,255,255,.035); }}
 .placeholder {{ border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }}
 .rank-badge {{ display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }}
 .metric-strip {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }}
@@ -635,7 +636,7 @@ function buildProductSlides() {{
     slideNo += 1;
 
     g.items.forEach((r)=>{{
-    const section=document.createElement('section'); section.className='slide';
+    const section=document.createElement('section'); section.className='slide product-slide';
     section.innerHTML = `<div class="content">
       <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>${{String(slideNo).padStart(2,'0')}} · ${{groupLabel[g.category]}} Highlight</div></div>
       <div><h1>${{r.item}}</h1><p class="sub">${{groupLabel[g.category]}} product highlight generated from the exact best-seller codes shown on slide 22. Image area is intentionally left blank for product photo insertion.</p></div>
@@ -646,10 +647,7 @@ function buildProductSlides() {{
         <div class="card glow-card product-info-card">
           <div class="label">Product Name</div>
           <h2 class="product-title-line">${{r.product_name}}</h2>
-          <div class="spec-chips">
-            <div class="mini-metric"><div class="label">Type</div><b>${{r.category}}</b></div>
-            <div class="mini-metric"><div class="label">Sell-out Rank</div><b>${{r.periods.join(' · ')}}</b></div>
-          </div>
+          <div class="mini-metric product-type-chip"><div class="label">Type</div><b>${{r.category}}</b></div>
           <div style="min-height:0">
             <div class="label">Specifications / Thông số</div>
             <div class="spec-box editable-copy" style="margin-top:10px">
@@ -662,6 +660,8 @@ function buildProductSlides() {{
               <div>- Tính năng chính:</div>
               <div>- Cổng kết nối / Phụ kiện:</div>
               <div>- Bảo hành / Ghi chú:</div>
+              <div>- Giá bán / Phân khúc:</div>
+              <div>- Điểm nổi bật khi giới thiệu:</div>
             </div>
           </div>
         </div>
