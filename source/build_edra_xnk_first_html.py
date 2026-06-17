@@ -737,6 +737,7 @@ const BASE_HTML_SOURCE = document.documentElement.outerHTML;
 let editMode = false;
 let editStore = {{texts:{{}}, images:{{}}}};
 let activeImageKey = null;
+let embeddedEditStoreLoaded = false;
 function loadEditStore() {{
   try {{ editStore = JSON.parse(localStorage.getItem(EDIT_KEY) || '{{"texts":{{}},"images":{{}}}}'); }}
   catch(e) {{ editStore = {{texts:{{}}, images:{{}}}}; }}
@@ -755,7 +756,7 @@ function assignEditKeys() {{
   }});
 }}
 function applyEdits() {{
-  loadEditStore();
+  if(!embeddedEditStoreLoaded) loadEditStore();
   assignEditKeys();
   editableTextNodes().forEach(node=>{{ if(editStore.texts[node.dataset.editKey] !== undefined) node.innerHTML = editStore.texts[node.dataset.editKey]; }});
   document.querySelectorAll('.editable-image').forEach(box=>{{
@@ -771,6 +772,7 @@ function applyEmbeddedEditStore() {{
     parsed.texts = parsed.texts || {{}};
     parsed.images = parsed.images || {{}};
     editStore = parsed;
+    embeddedEditStoreLoaded = true;
     try {{ localStorage.setItem(EDIT_KEY, JSON.stringify(editStore)); }} catch(e) {{}}
   }} catch(e) {{
     console.warn('Embedded edits could not be loaded', e);
