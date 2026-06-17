@@ -769,19 +769,24 @@ function saveEdits(showAlert=true) {
     localStorage.setItem(EDIT_KEY, JSON.stringify(editStore));
     if(showAlert) alert('Saved edits in this browser. Use Export to keep a backup file.');
   } catch(e) {
-    alert('Could not save all edits. Images may be too large. Use smaller images or Export current edits.');
+    try {
+      localStorage.setItem(EDIT_KEY, JSON.stringify({texts: editStore.texts, images: {}}));
+    } catch(err) {}
+    const msg = 'Ảnh nhiều hoặc quá nặng nên trình duyệt không lưu tự động được hết. Text đã được ưu tiên lưu; ảnh vẫn còn trong phiên hiện tại. Hãy bấm Download HTML hoặc Export trước khi reload trang.';
+    if(showAlert) alert(msg);
+    else console.warn(msg);
   }
 }
 async function compressImage(file) {
   const dataUrl = await new Promise((resolve,reject)=>{ const r=new FileReader(); r.onload=()=>resolve(r.result); r.onerror=reject; r.readAsDataURL(file); });
   const img = await new Promise((resolve,reject)=>{ const i=new Image(); i.onload=()=>resolve(i); i.onerror=reject; i.src=dataUrl; });
-  const max = 1400;
+  const max = 900;
   const scale = Math.min(1, max / Math.max(img.width, img.height));
   const canvas = document.createElement('canvas');
   canvas.width = Math.round(img.width * scale);
   canvas.height = Math.round(img.height * scale);
   canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-  return canvas.toDataURL('image/jpeg', .86);
+  return canvas.toDataURL('image/jpeg', .68);
 }
 document.getElementById('imagePicker').addEventListener('change', async e=>{
   const file = e.target.files && e.target.files[0];
