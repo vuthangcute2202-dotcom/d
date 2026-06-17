@@ -1,0 +1,1517 @@
+{
+  "totals": {
+    "total_2025": 328543.0,
+    "total_2026_5m": 118961.0,
+    "total_all": 447504.0
+  },
+  "yearly": [
+    {
+      "year": 2025,
+      "category": "Chair",
+      "sold_quantity": 11589.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "sold_quantity": 23495.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "sold_quantity": 90080.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "sold_quantity": 102993.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "sold_quantity": 100386.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "sold_quantity": 3958.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "sold_quantity": 8762.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "sold_quantity": 24403.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "sold_quantity": 55183.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "sold_quantity": 26655.0
+    }
+  ],
+  "monthly": [
+    {
+      "year": 2025,
+      "month": 1,
+      "period": "2025-01",
+      "category": "Chair",
+      "sold_quantity": 697.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "period": "2025-01",
+      "category": "Headset",
+      "sold_quantity": 1599.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "period": "2025-01",
+      "category": "Keyboard",
+      "sold_quantity": 2757.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "period": "2025-01",
+      "category": "Monitor",
+      "sold_quantity": 1762.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "period": "2025-01",
+      "category": "Mouse",
+      "sold_quantity": 3325.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "period": "2025-02",
+      "category": "Chair",
+      "sold_quantity": 1283.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "period": "2025-02",
+      "category": "Headset",
+      "sold_quantity": 1081.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "period": "2025-02",
+      "category": "Keyboard",
+      "sold_quantity": 9711.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "period": "2025-02",
+      "category": "Monitor",
+      "sold_quantity": 6416.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "period": "2025-02",
+      "category": "Mouse",
+      "sold_quantity": 8123.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "period": "2025-03",
+      "category": "Chair",
+      "sold_quantity": 1050.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "period": "2025-03",
+      "category": "Headset",
+      "sold_quantity": 1700.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "period": "2025-03",
+      "category": "Keyboard",
+      "sold_quantity": 7670.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "period": "2025-03",
+      "category": "Monitor",
+      "sold_quantity": 7177.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "period": "2025-03",
+      "category": "Mouse",
+      "sold_quantity": 8487.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "period": "2025-04",
+      "category": "Chair",
+      "sold_quantity": 807.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "period": "2025-04",
+      "category": "Headset",
+      "sold_quantity": 827.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "period": "2025-04",
+      "category": "Keyboard",
+      "sold_quantity": 5545.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "period": "2025-04",
+      "category": "Monitor",
+      "sold_quantity": 11123.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "period": "2025-04",
+      "category": "Mouse",
+      "sold_quantity": 5016.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "period": "2025-05",
+      "category": "Chair",
+      "sold_quantity": 1122.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "period": "2025-05",
+      "category": "Headset",
+      "sold_quantity": 4536.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "period": "2025-05",
+      "category": "Keyboard",
+      "sold_quantity": 11557.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "period": "2025-05",
+      "category": "Monitor",
+      "sold_quantity": 9629.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "period": "2025-05",
+      "category": "Mouse",
+      "sold_quantity": 10385.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "period": "2025-06",
+      "category": "Chair",
+      "sold_quantity": 951.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "period": "2025-06",
+      "category": "Headset",
+      "sold_quantity": 2480.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "period": "2025-06",
+      "category": "Keyboard",
+      "sold_quantity": 10141.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "period": "2025-06",
+      "category": "Monitor",
+      "sold_quantity": 7666.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "period": "2025-06",
+      "category": "Mouse",
+      "sold_quantity": 8960.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "period": "2025-07",
+      "category": "Chair",
+      "sold_quantity": 895.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "period": "2025-07",
+      "category": "Headset",
+      "sold_quantity": 1973.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "period": "2025-07",
+      "category": "Keyboard",
+      "sold_quantity": 7241.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "period": "2025-07",
+      "category": "Monitor",
+      "sold_quantity": 9638.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "period": "2025-07",
+      "category": "Mouse",
+      "sold_quantity": 5990.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "period": "2025-08",
+      "category": "Chair",
+      "sold_quantity": 1094.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "period": "2025-08",
+      "category": "Headset",
+      "sold_quantity": 2049.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "period": "2025-08",
+      "category": "Keyboard",
+      "sold_quantity": 7520.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "period": "2025-08",
+      "category": "Monitor",
+      "sold_quantity": 9859.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "period": "2025-08",
+      "category": "Mouse",
+      "sold_quantity": 9149.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "period": "2025-09",
+      "category": "Chair",
+      "sold_quantity": 913.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "period": "2025-09",
+      "category": "Headset",
+      "sold_quantity": 1624.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "period": "2025-09",
+      "category": "Keyboard",
+      "sold_quantity": 8020.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "period": "2025-09",
+      "category": "Monitor",
+      "sold_quantity": 10161.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "period": "2025-09",
+      "category": "Mouse",
+      "sold_quantity": 10524.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "period": "2025-10",
+      "category": "Chair",
+      "sold_quantity": 1056.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "period": "2025-10",
+      "category": "Headset",
+      "sold_quantity": 1657.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "period": "2025-10",
+      "category": "Keyboard",
+      "sold_quantity": 6881.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "period": "2025-10",
+      "category": "Monitor",
+      "sold_quantity": 8684.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "period": "2025-10",
+      "category": "Mouse",
+      "sold_quantity": 10419.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "period": "2025-11",
+      "category": "Chair",
+      "sold_quantity": 834.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "period": "2025-11",
+      "category": "Headset",
+      "sold_quantity": 2545.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "period": "2025-11",
+      "category": "Keyboard",
+      "sold_quantity": 4989.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "period": "2025-11",
+      "category": "Monitor",
+      "sold_quantity": 10479.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "period": "2025-11",
+      "category": "Mouse",
+      "sold_quantity": 8010.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "period": "2025-12",
+      "category": "Chair",
+      "sold_quantity": 887.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "period": "2025-12",
+      "category": "Headset",
+      "sold_quantity": 1424.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "period": "2025-12",
+      "category": "Keyboard",
+      "sold_quantity": 8048.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "period": "2025-12",
+      "category": "Monitor",
+      "sold_quantity": 10399.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "period": "2025-12",
+      "category": "Mouse",
+      "sold_quantity": 11998.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "period": "2026-01",
+      "category": "Chair",
+      "sold_quantity": 258.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "period": "2026-01",
+      "category": "Headset",
+      "sold_quantity": 331.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "period": "2026-01",
+      "category": "Keyboard",
+      "sold_quantity": 3951.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "period": "2026-01",
+      "category": "Monitor",
+      "sold_quantity": 11225.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "period": "2026-01",
+      "category": "Mouse",
+      "sold_quantity": 5659.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "period": "2026-02",
+      "category": "Chair",
+      "sold_quantity": 960.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "period": "2026-02",
+      "category": "Headset",
+      "sold_quantity": 496.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "period": "2026-02",
+      "category": "Keyboard",
+      "sold_quantity": 3161.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "period": "2026-02",
+      "category": "Monitor",
+      "sold_quantity": 6327.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "period": "2026-02",
+      "category": "Mouse",
+      "sold_quantity": 2817.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "period": "2026-03",
+      "category": "Chair",
+      "sold_quantity": 1166.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "period": "2026-03",
+      "category": "Headset",
+      "sold_quantity": 4396.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "period": "2026-03",
+      "category": "Keyboard",
+      "sold_quantity": 8144.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "period": "2026-03",
+      "category": "Monitor",
+      "sold_quantity": 14444.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "period": "2026-03",
+      "category": "Mouse",
+      "sold_quantity": 8413.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "period": "2026-04",
+      "category": "Chair",
+      "sold_quantity": 552.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "period": "2026-04",
+      "category": "Headset",
+      "sold_quantity": 2598.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "period": "2026-04",
+      "category": "Keyboard",
+      "sold_quantity": 4267.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "period": "2026-04",
+      "category": "Monitor",
+      "sold_quantity": 13336.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "period": "2026-04",
+      "category": "Mouse",
+      "sold_quantity": 4329.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "period": "2026-05",
+      "category": "Chair",
+      "sold_quantity": 1022.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "period": "2026-05",
+      "category": "Headset",
+      "sold_quantity": 941.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "period": "2026-05",
+      "category": "Keyboard",
+      "sold_quantity": 4880.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "period": "2026-05",
+      "category": "Monitor",
+      "sold_quantity": 9851.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "period": "2026-05",
+      "category": "Mouse",
+      "sold_quantity": 5437.0
+    }
+  ],
+  "total_month": [
+    {
+      "year": 2025,
+      "month": 1,
+      "period": "2025-01",
+      "sold_quantity": 10140.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "period": "2025-02",
+      "sold_quantity": 26614.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "period": "2025-03",
+      "sold_quantity": 26084.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "period": "2025-04",
+      "sold_quantity": 23318.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "period": "2025-05",
+      "sold_quantity": 37229.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "period": "2025-06",
+      "sold_quantity": 30198.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "period": "2025-07",
+      "sold_quantity": 25737.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "period": "2025-08",
+      "sold_quantity": 29671.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "period": "2025-09",
+      "sold_quantity": 31242.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "period": "2025-10",
+      "sold_quantity": 28697.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "period": "2025-11",
+      "sold_quantity": 26857.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "period": "2025-12",
+      "sold_quantity": 32756.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "period": "2026-01",
+      "sold_quantity": 21424.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "period": "2026-02",
+      "sold_quantity": 13761.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "period": "2026-03",
+      "sold_quantity": 36563.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "period": "2026-04",
+      "sold_quantity": 25082.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "period": "2026-05",
+      "sold_quantity": 22131.0
+    }
+  ],
+  "category_total": [
+    {
+      "category": "Keyboard",
+      "sold_quantity": 114483.0
+    },
+    {
+      "category": "Mouse",
+      "sold_quantity": 127041.0
+    },
+    {
+      "category": "Headset",
+      "sold_quantity": 32257.0
+    },
+    {
+      "category": "Monitor",
+      "sold_quantity": 158176.0
+    },
+    {
+      "category": "Chair",
+      "sold_quantity": 15547.0
+    }
+  ],
+  "yoy_5m": [
+    {
+      "category": "Keyboard",
+      "five_m_2025": 37240.0,
+      "five_m_2026": 24403.0,
+      "growth_abs": -12837.0,
+      "growth_pct": -0.3447099892588614
+    },
+    {
+      "category": "Mouse",
+      "five_m_2025": 35336.0,
+      "five_m_2026": 26655.0,
+      "growth_abs": -8681.0,
+      "growth_pct": -0.2456701381027847
+    },
+    {
+      "category": "Headset",
+      "five_m_2025": 9743.0,
+      "five_m_2026": 8762.0,
+      "growth_abs": -981.0,
+      "growth_pct": -0.10068767320127271
+    },
+    {
+      "category": "Monitor",
+      "five_m_2025": 36107.0,
+      "five_m_2026": 55183.0,
+      "growth_abs": 19076.0,
+      "growth_pct": 0.5283186085800538
+    },
+    {
+      "category": "Chair",
+      "five_m_2025": 4959.0,
+      "five_m_2026": 3958.0,
+      "growth_abs": -1001.0,
+      "growth_pct": -0.20185521274450494
+    }
+  ],
+  "top10": [
+    {
+      "category": "Mouse",
+      "item": "EM608W",
+      "product_name": "Chuột máy tính EM608W màu đen - E-dra",
+      "sold_quantity": 26248.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM24F100S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F100s, thương hiệu E-dra, kích thước 23.8 inch",
+      "sold_quantity": 23756.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK506",
+      "product_name": "Bàn phím máy tính EK506 màu đen, hiệu Edra",
+      "sold_quantity": 23641.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM606",
+      "product_name": "Chuột máy tính EM606 màu đen, hiệu Edra",
+      "sold_quantity": 22655.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM22F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM22F100H, thương hiệu E-dra, kích thước 21.5 inch",
+      "sold_quantity": 20029.0
+    }
+  ],
+  "top10_by_year": [
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM608W",
+      "product_name": "Chuột máy tính EM608W màu đen - E-dra",
+      "sold_quantity": 26161.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "item": "EGM24F100S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F100s, thương hiệu E-dra, kích thước 23.8 inch",
+      "sold_quantity": 20059.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "item": "EK506",
+      "product_name": "Bàn phím máy tính EK506 màu đen, hiệu Edra",
+      "sold_quantity": 18736.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM606",
+      "product_name": "Chuột máy tính EM606 màu đen, hiệu Edra",
+      "sold_quantity": 17982.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM601V2",
+      "product_name": "Chuột máy tính EM601V2 - E-Dra",
+      "sold_quantity": 15789.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM24F120S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F120S, thương hiệu Edra, kích thước 23.8 inch",
+      "sold_quantity": 8636.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM24F120PV",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F120PV, thương hiệu EDRA; kích thước: 24 inch",
+      "sold_quantity": 8377.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM24F120H",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F120H thương hiệu EDRA; kích thước: 23.8 inch",
+      "sold_quantity": 7657.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM22F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM22F100H, thương hiệu E-dra, kích thước 21.5 inch",
+      "sold_quantity": 5158.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "item": "EK506",
+      "product_name": "Bàn phím máy tính EK506 màu đen, hiệu Edra",
+      "sold_quantity": 4905.0
+    }
+  ],
+  "top_by_category": [
+    {
+      "category": "Chair",
+      "item": "EGC234BK",
+      "product_name": "Ghế xoay Dignity EGC234 màu đen - E-Dra",
+      "sold_quantity": 2223.0
+    },
+    {
+      "category": "Chair",
+      "item": "EGC236",
+      "product_name": "Ghế xoay EGC236 - EDRA",
+      "sold_quantity": 1213.0
+    },
+    {
+      "category": "Chair",
+      "item": "EGC232BK-V2",
+      "product_name": "Ghế xoay Yummy EGC232 V2 màu đen - E-Dra",
+      "sold_quantity": 1078.0
+    },
+    {
+      "category": "Chair",
+      "item": "EGC229GRA",
+      "product_name": "Ghế xoay EGC229 level E Black Gray - E-Dra",
+      "sold_quantity": 945.0
+    },
+    {
+      "category": "Chair",
+      "item": "EGC234RE",
+      "product_name": "Ghế xoay Dignity EGC234 màu đỏ - E-Dra",
+      "sold_quantity": 926.0
+    },
+    {
+      "category": "Chair",
+      "item": "EEC218BK",
+      "product_name": "Ghế xoay EEC218 màu đen - Hiệu E-Dra",
+      "sold_quantity": 894.0
+    },
+    {
+      "category": "Chair",
+      "item": "EGC203V2",
+      "product_name": "Ghế xoay Hercules EGC203 V2 màu đen - E-Dra",
+      "sold_quantity": 700.0
+    },
+    {
+      "category": "Chair",
+      "item": "EEC228",
+      "product_name": "Ghế xoay EEC228, Hiệu Edra",
+      "sold_quantity": 677.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH404BK",
+      "product_name": "Tai nghe EH404 màu đen - E-Dra",
+      "sold_quantity": 8526.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH406",
+      "product_name": "Tai nghe EH406 màu đen - E-Dra",
+      "sold_quantity": 7280.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH607B-KK",
+      "product_name": "Tai nghe EH607B màu Khaki - E-Dra",
+      "sold_quantity": 3184.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH416PRO",
+      "product_name": "Tai nghe EH416PRO - E-Dra",
+      "sold_quantity": 3082.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH414PRO",
+      "product_name": "Tai nghe EH414PRO - E-Dra",
+      "sold_quantity": 1741.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH405BK",
+      "product_name": "Tai nghe EH405 màu đen - E-Dra",
+      "sold_quantity": 1517.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH496W",
+      "product_name": "Tai nghe không dây EH496W - E-Dra",
+      "sold_quantity": 1325.0
+    },
+    {
+      "category": "Headset",
+      "item": "EH414W_BK",
+      "product_name": "Tai nghe EH414W màu đen- E-Dra",
+      "sold_quantity": 1151.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK506",
+      "product_name": "Bàn phím máy tính EK506 màu đen, hiệu Edra",
+      "sold_quantity": 23641.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK501",
+      "product_name": "Bàn phím máy tính EK501 E-Dra",
+      "sold_quantity": 15366.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK508",
+      "product_name": "Bàn phím máy tính EK508 màu đen, hiệu Edra",
+      "sold_quantity": 8376.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK375V2-AL",
+      "product_name": "Bàn phím máy tính EK375v2 Alpha - E-Dra",
+      "sold_quantity": 4432.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK375V2-BE",
+      "product_name": "Bàn phím máy tínhEK375v2 Beta - E-Dra",
+      "sold_quantity": 3948.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK398-AL-RE",
+      "product_name": "Bàn phím EK398 Alpha Red Switch - E-Dra",
+      "sold_quantity": 3263.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK398-BE-RE",
+      "product_name": "Bàn phím EK398 Beta Red Switch - E-Dra",
+      "sold_quantity": 3242.0
+    },
+    {
+      "category": "Keyboard",
+      "item": "EK316BL",
+      "product_name": "Bàn phím máy tính EK316 Blue switch, hiệu Edra, hàng mới 100%",
+      "sold_quantity": 2843.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM24F100S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F100s, thương hiệu E-dra, kích thước 23.8 inch",
+      "sold_quantity": 23756.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM22F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM22F100H, thương hiệu E-dra, kích thước 21.5 inch",
+      "sold_quantity": 20029.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM27F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM27F100H, thương hiệu E-dra, kích thước 27 inch",
+      "sold_quantity": 15154.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM24F100PV",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F100PV, thương hiệu EDRA; kích thước: 24 inch",
+      "sold_quantity": 14742.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM24F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F100H, thương hiệu E-dra, kích thước 23.8 inch",
+      "sold_quantity": 13205.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM24F120S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F120S, thương hiệu Edra, kích thước 23.8 inch",
+      "sold_quantity": 11477.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM24F120PV",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F120PV, thương hiệu EDRA; kích thước: 24 inch",
+      "sold_quantity": 10405.0
+    },
+    {
+      "category": "Monitor",
+      "item": "EGM27F120S",
+      "product_name": "Màn hình máy tính LCD, model : EGM27F120S, thương hiệu Edra, kích thước 27 inch",
+      "sold_quantity": 9166.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM608W",
+      "product_name": "Chuột máy tính EM608W màu đen - E-dra",
+      "sold_quantity": 26248.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM606",
+      "product_name": "Chuột máy tính EM606 màu đen, hiệu Edra",
+      "sold_quantity": 22655.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM601V2",
+      "product_name": "Chuột máy tính EM601V2 - E-Dra",
+      "sold_quantity": 16503.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM6102BK",
+      "product_name": "Chuột máy tính EM6102 màu đen E-Dra",
+      "sold_quantity": 11143.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM608",
+      "product_name": "Chuột máy tính EM608 màu đen - E-dra",
+      "sold_quantity": 8682.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM624W-BK",
+      "product_name": "Chuột máy tính không dây EM624W màu đen E-Dra",
+      "sold_quantity": 5099.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM611W-BK",
+      "product_name": "Chuột máy tính EM611w Black - Edra",
+      "sold_quantity": 4721.0
+    },
+    {
+      "category": "Mouse",
+      "item": "EM625X-BK",
+      "product_name": "Chuột máy tính EM625X màu đen- E-dra",
+      "sold_quantity": 2526.0
+    }
+  ],
+  "top_by_category_year": [
+    {
+      "year": 2025,
+      "category": "Chair",
+      "item": "EGC234BK",
+      "product_name": "Ghế xoay Dignity EGC234 màu đen - E-Dra",
+      "sold_quantity": 1803.0
+    },
+    {
+      "year": 2025,
+      "category": "Chair",
+      "item": "EGC236",
+      "product_name": "Ghế xoay EGC236 - EDRA",
+      "sold_quantity": 1162.0
+    },
+    {
+      "year": 2025,
+      "category": "Chair",
+      "item": "EGC232BK-V2",
+      "product_name": "Ghế xoay Yummy EGC232 V2 màu đen - E-Dra",
+      "sold_quantity": 804.0
+    },
+    {
+      "year": 2025,
+      "category": "Chair",
+      "item": "EGC234RE",
+      "product_name": "Ghế xoay Dignity EGC234 màu đỏ - E-Dra",
+      "sold_quantity": 759.0
+    },
+    {
+      "year": 2025,
+      "category": "Chair",
+      "item": "EEC218BK",
+      "product_name": "Ghế xoay EEC218 màu đen - Hiệu E-Dra",
+      "sold_quantity": 698.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "item": "EH404BK",
+      "product_name": "Tai nghe EH404 màu đen - E-Dra",
+      "sold_quantity": 6355.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "item": "EH607B-KK",
+      "product_name": "Tai nghe EH607B màu Khaki - E-Dra",
+      "sold_quantity": 3183.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "item": "EH406",
+      "product_name": "Tai nghe EH406 màu đen - E-Dra",
+      "sold_quantity": 3011.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "item": "EH416PRO",
+      "product_name": "Tai nghe EH416PRO - E-Dra",
+      "sold_quantity": 2739.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "item": "EH405BK",
+      "product_name": "Tai nghe EH405 màu đen - E-Dra",
+      "sold_quantity": 1515.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "item": "EK506",
+      "product_name": "Bàn phím máy tính EK506 màu đen, hiệu Edra",
+      "sold_quantity": 18736.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "item": "EK501",
+      "product_name": "Bàn phím máy tính EK501 E-Dra",
+      "sold_quantity": 14105.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "item": "EK508",
+      "product_name": "Bàn phím máy tính EK508 màu đen, hiệu Edra",
+      "sold_quantity": 4409.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "item": "EK375V2-AL",
+      "product_name": "Bàn phím máy tính EK375v2 Alpha - E-Dra",
+      "sold_quantity": 3134.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "item": "EK375V2-BE",
+      "product_name": "Bàn phím máy tínhEK375v2 Beta - E-Dra",
+      "sold_quantity": 2921.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "item": "EGM24F100S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F100s, thương hiệu E-dra, kích thước 23.8 inch",
+      "sold_quantity": 20059.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "item": "EGM27F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM27F100H, thương hiệu E-dra, kích thước 27 inch",
+      "sold_quantity": 15154.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "item": "EGM22F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM22F100H, thương hiệu E-dra, kích thước 21.5 inch",
+      "sold_quantity": 14871.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "item": "EGM24F100PV",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F100PV, thương hiệu EDRA; kích thước: 24 inch",
+      "sold_quantity": 14665.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "item": "EGM24F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F100H, thương hiệu E-dra, kích thước 23.8 inch",
+      "sold_quantity": 13163.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM608W",
+      "product_name": "Chuột máy tính EM608W màu đen - E-dra",
+      "sold_quantity": 26161.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM606",
+      "product_name": "Chuột máy tính EM606 màu đen, hiệu Edra",
+      "sold_quantity": 17982.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM601V2",
+      "product_name": "Chuột máy tính EM601V2 - E-Dra",
+      "sold_quantity": 15789.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM6102BK",
+      "product_name": "Chuột máy tính EM6102 màu đen E-Dra",
+      "sold_quantity": 10178.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "item": "EM608",
+      "product_name": "Chuột máy tính EM608 màu đen - E-dra",
+      "sold_quantity": 4434.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "item": "EEC228",
+      "product_name": "Ghế xoay EEC228, Hiệu Edra",
+      "sold_quantity": 463.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "item": "EGC234BK",
+      "product_name": "Ghế xoay Dignity EGC234 màu đen - E-Dra",
+      "sold_quantity": 420.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "item": "EGC236BK",
+      "product_name": "Ghế xoay EGC236 màu đen - EDRA",
+      "sold_quantity": 405.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "item": "EGC232BK-V2",
+      "product_name": "Ghế xoay Yummy EGC232 V2 màu đen - E-Dra",
+      "sold_quantity": 274.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "item": "EGC229GRA",
+      "product_name": "Ghế xoay EGC229 level E Black Gray - E-Dra",
+      "sold_quantity": 259.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "item": "EH406",
+      "product_name": "Tai nghe EH406 màu đen - E-Dra",
+      "sold_quantity": 4269.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "item": "EH404BK",
+      "product_name": "Tai nghe EH404 màu đen - E-Dra",
+      "sold_quantity": 2171.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "item": "EH414PRO",
+      "product_name": "Tai nghe EH414PRO - E-Dra",
+      "sold_quantity": 454.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "item": "EH497W",
+      "product_name": "Tai nghe không dây EH497W - Edra",
+      "sold_quantity": 426.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "item": "EH416PRO",
+      "product_name": "Tai nghe EH416PRO - E-Dra",
+      "sold_quantity": 343.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "item": "EK506",
+      "product_name": "Bàn phím máy tính EK506 màu đen, hiệu Edra",
+      "sold_quantity": 4905.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "item": "EK508",
+      "product_name": "Bàn phím máy tính EK508 màu đen, hiệu Edra",
+      "sold_quantity": 3967.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "item": "EK375V2-AL",
+      "product_name": "Bàn phím máy tính EK375v2 Alpha - E-Dra",
+      "sold_quantity": 1298.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "item": "EK501",
+      "product_name": "Bàn phím máy tính EK501 E-Dra",
+      "sold_quantity": 1261.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "item": "EK375V2-BE",
+      "product_name": "Bàn phím máy tínhEK375v2 Beta - E-Dra",
+      "sold_quantity": 1027.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM24F120S",
+      "product_name": "Màn hình máy tính LCD, model : EGM24F120S, thương hiệu Edra, kích thước 23.8 inch",
+      "sold_quantity": 8636.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM24F120PV",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F120PV, thương hiệu EDRA; kích thước: 24 inch",
+      "sold_quantity": 8377.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM24F120H",
+      "product_name": "Màn hình máy tính LCD, model: EGM24F120H thương hiệu EDRA; kích thước: 23.8 inch",
+      "sold_quantity": 7657.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM22F100H",
+      "product_name": "Màn hình máy tính LCD, model : EGM22F100H, thương hiệu E-dra, kích thước 21.5 inch",
+      "sold_quantity": 5158.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "item": "EGM27F120S",
+      "product_name": "Màn hình máy tính LCD, model : EGM27F120S, thương hiệu Edra, kích thước 27 inch",
+      "sold_quantity": 4886.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "item": "EM606",
+      "product_name": "Chuột máy tính EM606 màu đen, hiệu Edra",
+      "sold_quantity": 4673.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "item": "EM608",
+      "product_name": "Chuột máy tính EM608 màu đen - E-dra",
+      "sold_quantity": 4248.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "item": "EM611W-BK",
+      "product_name": "Chuột máy tính EM611w Black - Edra",
+      "sold_quantity": 3746.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "item": "EM631W",
+      "product_name": "Chuột máy tính EM631W - Edra",
+      "sold_quantity": 1641.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "item": "EM624W-BK",
+      "product_name": "Chuột máy tính không dây EM624W màu đen E-Dra",
+      "sold_quantity": 1112.0
+    }
+  ]
+}

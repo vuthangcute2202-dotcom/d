@@ -1,0 +1,763 @@
+{
+  "categories": [
+    "Keyboard",
+    "Mouse",
+    "Headset",
+    "Monitor",
+    "Chair"
+  ],
+  "totals": {
+    "total_2025": 312535.0,
+    "total_2026_5m": 167980.0,
+    "total_all": 480515.0
+  },
+  "monthly": [
+    {
+      "year": 2025,
+      "month": 1,
+      "category": "Headset",
+      "quantity": 3989.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "category": "Keyboard",
+      "quantity": 15290.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "category": "Monitor",
+      "quantity": 0.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "category": "Mouse",
+      "quantity": 11470.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "category": "Chair",
+      "quantity": 813.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "category": "Headset",
+      "quantity": 2497.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "category": "Keyboard",
+      "quantity": 2057.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "category": "Monitor",
+      "quantity": 7295.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "category": "Mouse",
+      "quantity": 16565.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "category": "Chair",
+      "quantity": 1321.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "category": "Headset",
+      "quantity": 997.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "category": "Keyboard",
+      "quantity": 2257.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "category": "Monitor",
+      "quantity": 10727.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "category": "Mouse",
+      "quantity": 0.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "category": "Chair",
+      "quantity": 1.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "category": "Headset",
+      "quantity": 2991.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "category": "Keyboard",
+      "quantity": 10152.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "category": "Monitor",
+      "quantity": 8710.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "category": "Mouse",
+      "quantity": 1496.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "category": "Chair",
+      "quantity": 950.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "category": "Headset",
+      "quantity": 5844.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "category": "Keyboard",
+      "quantity": 17136.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "category": "Monitor",
+      "quantity": 14188.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "category": "Mouse",
+      "quantity": 5884.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "category": "Headset",
+      "quantity": 3492.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "category": "Keyboard",
+      "quantity": 16811.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "category": "Monitor",
+      "quantity": 6398.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "category": "Mouse",
+      "quantity": 18464.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "category": "Chair",
+      "quantity": 1218.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "category": "Headset",
+      "quantity": 638.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "category": "Keyboard",
+      "quantity": 6366.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "category": "Monitor",
+      "quantity": 15299.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "category": "Mouse",
+      "quantity": 6688.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "category": "Chair",
+      "quantity": 1557.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "category": "Headset",
+      "quantity": 80.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "category": "Keyboard",
+      "quantity": 362.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "category": "Monitor",
+      "quantity": 4924.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "category": "Mouse",
+      "quantity": 260.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "category": "Chair",
+      "quantity": 175.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "category": "Headset",
+      "quantity": 1994.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "category": "Keyboard",
+      "quantity": 5683.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "category": "Monitor",
+      "quantity": 10202.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "category": "Mouse",
+      "quantity": 2991.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "category": "Headset",
+      "quantity": 0.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "category": "Keyboard",
+      "quantity": 7537.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "category": "Monitor",
+      "quantity": 4981.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "category": "Mouse",
+      "quantity": 0.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "category": "Chair",
+      "quantity": 324.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "category": "Headset",
+      "quantity": 2992.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "category": "Keyboard",
+      "quantity": 2732.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "category": "Monitor",
+      "quantity": 11336.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "category": "Mouse",
+      "quantity": 422.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "category": "Headset",
+      "quantity": 2997.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "category": "Keyboard",
+      "quantity": 10970.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "category": "Monitor",
+      "quantity": 6033.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "category": "Mouse",
+      "quantity": 15979.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "category": "Chair",
+      "quantity": 1799.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "category": "Headset",
+      "quantity": 30.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "category": "Keyboard",
+      "quantity": 420.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "category": "Monitor",
+      "quantity": 12084.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "category": "Mouse",
+      "quantity": 881.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "category": "Chair",
+      "quantity": 275.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "category": "Headset",
+      "quantity": 9970.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "category": "Keyboard",
+      "quantity": 18964.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "category": "Monitor",
+      "quantity": 6695.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "category": "Mouse",
+      "quantity": 39887.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "category": "Headset",
+      "quantity": 1.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "category": "Keyboard",
+      "quantity": 0.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "category": "Monitor",
+      "quantity": 18270.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "category": "Mouse",
+      "quantity": 0.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "category": "Chair",
+      "quantity": 1130.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "category": "Headset",
+      "quantity": 1.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "category": "Keyboard",
+      "quantity": 0.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "category": "Monitor",
+      "quantity": 15500.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "category": "Mouse",
+      "quantity": 10.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "category": "Chair",
+      "quantity": 808.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "category": "Headset",
+      "quantity": 998.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "category": "Keyboard",
+      "quantity": 12967.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "category": "Monitor",
+      "quantity": 8347.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "category": "Mouse",
+      "quantity": 18943.0
+    }
+  ],
+  "total_month": [
+    {
+      "year": 2025,
+      "month": 1,
+      "quantity": 30749.0,
+      "period": "2025-01"
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "quantity": 29227.0,
+      "period": "2025-02"
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "quantity": 15302.0,
+      "period": "2025-03"
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "quantity": 23350.0,
+      "period": "2025-04"
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "quantity": 44002.0,
+      "period": "2025-05"
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "quantity": 45165.0,
+      "period": "2025-06"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "quantity": 30209.0,
+      "period": "2025-07"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "quantity": 7183.0,
+      "period": "2025-08"
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "quantity": 21045.0,
+      "period": "2025-09"
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "quantity": 12518.0,
+      "period": "2025-10"
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "quantity": 17806.0,
+      "period": "2025-11"
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "quantity": 35979.0,
+      "period": "2025-12"
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "quantity": 15214.0,
+      "period": "2026-01"
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "quantity": 75791.0,
+      "period": "2026-02"
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "quantity": 18271.0,
+      "period": "2026-03"
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "quantity": 16641.0,
+      "period": "2026-04"
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "quantity": 42063.0,
+      "period": "2026-05"
+    }
+  ],
+  "year_category": [
+    {
+      "year": 2025,
+      "category": "Chair",
+      "quantity": 6359.0
+    },
+    {
+      "year": 2025,
+      "category": "Headset",
+      "quantity": 28511.0
+    },
+    {
+      "year": 2025,
+      "category": "Keyboard",
+      "quantity": 97353.0
+    },
+    {
+      "year": 2025,
+      "category": "Monitor",
+      "quantity": 100093.0
+    },
+    {
+      "year": 2025,
+      "category": "Mouse",
+      "quantity": 80219.0
+    },
+    {
+      "year": 2026,
+      "category": "Chair",
+      "quantity": 4012.0
+    },
+    {
+      "year": 2026,
+      "category": "Headset",
+      "quantity": 11000.0
+    },
+    {
+      "year": 2026,
+      "category": "Keyboard",
+      "quantity": 32351.0
+    },
+    {
+      "year": 2026,
+      "category": "Monitor",
+      "quantity": 60896.0
+    },
+    {
+      "year": 2026,
+      "category": "Mouse",
+      "quantity": 59721.0
+    }
+  ],
+  "category_total": [
+    {
+      "category": "Chair",
+      "quantity": 10371.0
+    },
+    {
+      "category": "Headset",
+      "quantity": 39511.0
+    },
+    {
+      "category": "Keyboard",
+      "quantity": 129704.0
+    },
+    {
+      "category": "Monitor",
+      "quantity": 160989.0
+    },
+    {
+      "category": "Mouse",
+      "quantity": 139940.0
+    }
+  ],
+  "yoy": [
+    {
+      "category": "Keyboard",
+      "total_2025": 97353.0,
+      "total_2026_5m": 32351.0,
+      "five_m_2025": 46892.0,
+      "five_m_2026": 32351.0,
+      "growth_abs": -14541.0,
+      "growth_pct": -0.310095538684637
+    },
+    {
+      "category": "Mouse",
+      "total_2025": 80219.0,
+      "total_2026_5m": 59721.0,
+      "five_m_2025": 35415.0,
+      "five_m_2026": 59721.0,
+      "growth_abs": 24306.0,
+      "growth_pct": 0.6863193562049978
+    },
+    {
+      "category": "Headset",
+      "total_2025": 28511.0,
+      "total_2026_5m": 11000.0,
+      "five_m_2025": 16318.0,
+      "five_m_2026": 11000.0,
+      "growth_abs": -5318.0,
+      "growth_pct": -0.32589778159088123
+    },
+    {
+      "category": "Monitor",
+      "total_2025": 100093.0,
+      "total_2026_5m": 60896.0,
+      "five_m_2025": 40920.0,
+      "five_m_2026": 60896.0,
+      "growth_abs": 19976.0,
+      "growth_pct": 0.4881720430107527
+    },
+    {
+      "category": "Chair",
+      "total_2025": 6359.0,
+      "total_2026_5m": 4012.0,
+      "five_m_2025": 3085.0,
+      "five_m_2026": 4012.0,
+      "growth_abs": 927.0,
+      "growth_pct": 0.3004862236628849
+    }
+  ],
+  "top_chair": [
+    {
+      "item": "EDRA EGC236",
+      "quantity": 1700.0
+    },
+    {
+      "item": "EDRA EGC232V2YUMMY",
+      "quantity": 1644.0
+    },
+    {
+      "item": "EDRA EEC225",
+      "quantity": 1236.0
+    },
+    {
+      "item": "EDRA EGC234DIGNITY",
+      "quantity": 1218.0
+    },
+    {
+      "item": "EDRA EGC229",
+      "quantity": 1124.0
+    },
+    {
+      "item": "EDRA EEC228",
+      "quantity": 780.0
+    },
+    {
+      "item": "EDRA EGC235",
+      "quantity": 525.0
+    },
+    {
+      "item": "EDRA EGC203V2",
+      "quantity": 320.0
+    },
+    {
+      "item": "EDRA EEC218",
+      "quantity": 216.0
+    },
+    {
+      "item": "EDRA EEC224",
+      "quantity": 200.0
+    }
+  ]
+}
