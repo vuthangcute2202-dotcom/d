@@ -54,13 +54,14 @@ table {{ width:100%; border-collapse:collapse; font-size:15px; }} th,td {{ paddi
 .dot {{ width:9px; height:9px; border:0; border-radius:50%; background:#555565; cursor:pointer; }} .dot.active {{ width:28px; border-radius:999px; background:var(--orange); }}
 .arrow {{ position:fixed; top:50%; transform:translateY(-50%); z-index:9; width:46px; height:46px; border-radius:50%; border:1px solid #383842; background:rgba(0,0,0,.7); color:white; font-size:24px; cursor:pointer; }} .prev {{ left:16px; }} .next {{ right:16px; }}
 .edit-toolbar {{ position:fixed; right:18px; bottom:18px; z-index:99999; display:flex; gap:8px; align-items:center; padding:8px; border:1px solid #464652; border-radius:999px; background:rgba(0,0,0,.72); backdrop-filter:blur(12px); box-shadow:0 18px 55px rgba(0,0,0,.45); pointer-events:auto; }}
-.edit-toolbar button {{ border:1px solid #3a3a44; background:#111119; color:#fff; border-radius:999px; padding:10px 13px; font-size:12px; font-weight:950; cursor:pointer; pointer-events:auto; }}
+.edit-toolbar button {{ border:1px solid #3a3a44; background:#111119; color:#fff; border-radius:999px; padding:9px 12px; font-size:12px; font-weight:950; cursor:pointer; pointer-events:auto; }}
 .edit-toolbar button.primary {{ background:var(--orange); color:#111; border-color:var(--orange); }}
 .edit-toolbar .edit-extra {{ display:none; gap:8px; }}
-body.editing .edit-toolbar {{ left:50%; right:auto; bottom:18px; transform:translateX(-50%); border-radius:18px; background:rgba(0,0,0,.86); }}
+body.editing .edit-toolbar {{ top:14px; right:18px; bottom:auto; left:auto; transform:none; border-radius:18px; background:rgba(0,0,0,.86); max-width:760px; flex-wrap:wrap; justify-content:flex-end; }}
 body.editing .edit-toolbar .edit-extra {{ display:flex; }}
 .edit-status {{ display:none; position:fixed; left:50%; bottom:78px; transform:translateX(-50%); z-index:99999; max-width:620px; padding:10px 14px; border:1px solid rgba(255,106,0,.55); border-radius:16px; background:rgba(10,10,14,.92); color:#fff; font-size:13px; line-height:1.35; box-shadow:0 18px 55px rgba(0,0,0,.38); }}
-body.editing .edit-status {{ display:block; }}
+body.editing .edit-status {{ display:none; }}
+body.editing .nav {{ display:none; }}
 body.presenting .edit-toolbar, body.presenting .edit-status {{ display:none!important; }}
 body.editing [contenteditable="true"] {{ outline:1px dashed rgba(255,106,0,.65); outline-offset:3px; border-radius:8px; cursor:text; }}
 body.editing .editable-image {{ cursor:pointer; border-color:var(--orange); background:rgba(255,106,0,.06); }}
@@ -75,9 +76,10 @@ body.editing .editable-image {{ cursor:pointer; border-color:var(--orange); back
 .product-title-line {{ margin-top:6px; font-size:25px; line-height:1.12; letter-spacing:-.035em; }}
 .product-type-chip {{ width:230px; padding:10px 14px; }}
 .product-type-chip b {{ font-size:18px; }}
-.spec-box {{ border:1px solid var(--line); border-radius:20px; padding:18px; background:#0b0b10; min-height:0; height:100%; color:#f8fafc; font-size:15px; line-height:1.28; overflow:auto; }}
+.spec-box {{ border:1px solid var(--line); border-radius:20px; padding:18px; background:#0b0b10; min-height:0; height:100%; color:#f8fafc; font-size:15px; line-height:1.28; overflow:auto; white-space:normal; }}
 .spec-box b {{ color:var(--orange); }}
 .spec-box div {{ margin-top:6px; padding:6px 10px; border-radius:10px; background:rgba(255,255,255,.035); }}
+body.editing .spec-box {{ padding-bottom:48px; }}
 .placeholder {{ border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }}
 .rank-badge {{ display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }}
 .metric-strip {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }}
@@ -767,7 +769,11 @@ document.addEventListener('click', e=>{{
   activeImageKey = box.dataset.imageKey;
   document.getElementById('imagePicker').click();
 }});
-document.addEventListener('input', e=>{{ if(editMode && e.target.dataset && e.target.dataset.editKey) saveEdits(false); }});
+document.addEventListener('input', e=>{{
+  if(!editMode) return;
+  const editable = e.target.closest && e.target.closest('[data-edit-key]');
+  if(editable) saveEdits(false);
+}});
 function exportEdits() {{
   saveEdits(false);
   const blob = new Blob([JSON.stringify(editStore,null,2)], {{type:'application/json'}});
