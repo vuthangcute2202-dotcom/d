@@ -270,35 +270,35 @@ body.editing .editable-image {{ cursor:pointer; border-color:var(--orange); back
 
   <section class="slide"><div class="content">
     <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>11 · Brand Ranking</div></div>
-    <div><h1>EDRA Ranking vs Other Brands</h1><p class="sub">Brand-level XNK ranking by product group. Chair source is EDRA-only, so it does not have a comparable brand benchmark.</p></div>
-    <div class="card glow-card"><h2>EDRA Rank Board</h2><div id="rankSummaryCards" style="margin-top:22px"></div></div>
-    <div class="foot"><span>Ranking based on total 2025 + 5M2026 import quantity</span><span>11</span></div>
+    <div><h1>EDRA Ranking vs Other Brands</h1><p class="sub">Brand-level XNK ranking is separated by 2025 and 5M2026. Chair source is EDRA-only, so it does not have a comparable brand benchmark.</p></div>
+    <div class="card glow-card"><h2>EDRA Rank Board by Period</h2><div id="rankSummaryCards" style="margin-top:22px"></div></div>
+    <div class="foot"><span>Ranking separated by 2025 and 5M2026 import quantity</span><span>11</span></div>
   </div></section>
 
   <section class="slide"><div class="content">
     <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>12 · Keyboard Ranking</div></div>
-    <div><h1>Keyboard Import Ranking</h1><p class="sub">EDRA position against other brands in keyboard import quantity.</p></div>
+    <div><h1>Keyboard Import Ranking</h1><p class="sub">EDRA position against other brands, separated into 2025 and 5M2026.</p></div>
     <div class="body two"><div class="card"><div class="chart" id="rankKeyboardChart"></div></div><div class="card glow-card"><h2>EDRA Position</h2><div id="rankKeyboardInfo" style="margin-top:18px"></div><div class="chart" style="height:150px" id="rankKeyboardMini"></div></div></div>
     <div class="foot"><span>Keyboard brand ranking</span><span>12</span></div>
   </div></section>
 
   <section class="slide"><div class="content">
     <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>13 · Mouse Ranking</div></div>
-    <div><h1>Mouse Import Ranking</h1><p class="sub">EDRA position against other brands in mouse import quantity.</p></div>
+    <div><h1>Mouse Import Ranking</h1><p class="sub">EDRA position against other brands, separated into 2025 and 5M2026.</p></div>
     <div class="body two"><div class="card"><div class="chart" id="rankMouseChart"></div></div><div class="card glow-card"><h2>EDRA Position</h2><div id="rankMouseInfo" style="margin-top:18px"></div><div class="chart" style="height:150px" id="rankMouseMini"></div></div></div>
     <div class="foot"><span>Mouse brand ranking</span><span>13</span></div>
   </div></section>
 
   <section class="slide"><div class="content">
     <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>14 · Headset Ranking</div></div>
-    <div><h1>Headset Import Ranking</h1><p class="sub">EDRA position against other brands in headset import quantity.</p></div>
+    <div><h1>Headset Import Ranking</h1><p class="sub">EDRA position against other brands, separated into 2025 and 5M2026.</p></div>
     <div class="body two"><div class="card"><div class="chart" id="rankHeadsetChart"></div></div><div class="card glow-card"><h2>EDRA Position</h2><div id="rankHeadsetInfo" style="margin-top:18px"></div><div class="chart" style="height:150px" id="rankHeadsetMini"></div></div></div>
     <div class="foot"><span>Headset brand ranking</span><span>14</span></div>
   </div></section>
 
   <section class="slide"><div class="content">
     <div class="top"><div class="logo"><img src="assets/edra-logo.png" alt="EDRA"></div><div>15 · Monitor Ranking</div></div>
-    <div><h1>Monitor Import Ranking</h1><p class="sub">EDRA position against other brands in monitor import quantity.</p></div>
+    <div><h1>Monitor Import Ranking</h1><p class="sub">EDRA position against other brands, separated into 2025 and 5M2026.</p></div>
     <div class="body two"><div class="card"><div class="chart" id="rankMonitorChart"></div></div><div class="card glow-card"><h2>EDRA Position</h2><div id="rankMonitorInfo" style="margin-top:18px"></div><div class="chart" style="height:150px" id="rankMonitorMini"></div></div></div>
     <div class="foot"><span>Monitor brand ranking</span><span>15</span></div>
   </div></section>
@@ -419,44 +419,91 @@ function detailCards() {{
 function miniMetrics(id) {{
   el(id).innerHTML = rows().map(r=>`<div class="mini-metric"><div class="label">${{r.category}}</div><b>${{short(r.total_2025+r.total_2026_5m)}}</b><div class="note">Total</div></div>`).join('');
 }}
+function rankBlock(category, year) {{
+  const block = RANKING[category] || {{}};
+  return (block.by_year && block.by_year[String(year)]) || {{rows:[], edra:null}};
+}}
+function periodLabel(year) {{ return Number(year)===2026 ? '5M2026' : '2025'; }}
+function rankMarket(block) {{
+  const total = (block.rows||[]).reduce((a,b)=>a+(b.quantity||0),0);
+  const e = block.edra || {{rank:'-', quantity:0}};
+  return {{marketTotal: total, edra: e, share: total && e.quantity ? e.quantity / total : null}};
+}}
 function rankingChart(id, category) {{
-  const block = RANKING[category]; el(id).innerHTML=''; const rows = block.rows; const max = Math.max(...rows.map(r=>r.quantity),1); const svg=svgEl('svg',{{viewBox:'0 0 940 460'}});
-  rows.forEach((r,i)=>{{ const y=24+i*34; const isEdra=String(r.brand).toUpperCase()==='EDRA'; const color=isEdra?c.green:c.orange; svg.appendChild(svgEl('text',{{x:0,y:y+15,fill:isEdra?c.green:c.muted,'font-size':13,'font-weight':900}})).textContent='#'+r.rank; svg.appendChild(svgEl('text',{{x:54,y:y+15,fill:c.text,'font-size':13,'font-weight':900}})).textContent=r.brand; svg.appendChild(svgEl('rect',{{x:180,y,width:535,height:20,rx:10,fill:'#24242d'}})); svg.appendChild(svgEl('rect',{{class:'bar',x:180,y,width:Math.max(2,535*r.quantity/max),height:20,rx:10,fill:color}})); svg.appendChild(svgEl('text',{{x:740,y:y+16,fill:color,'font-size':13,'font-weight':900}})).textContent=fmt(r.quantity); if(isEdra) svg.appendChild(svgEl('text',{{x:845,y:y+16,fill:c.green,'font-size':12,'font-weight':900}})).textContent='EDRA'; }});
+  el(id).innerHTML='';
+  const svg=svgEl('svg',{{viewBox:'0 0 940 460'}});
+  [2025,2026].forEach((year,section)=>{{
+    const block = rankBlock(category, year);
+    const dataRows = (block.rows||[]).slice(0,10);
+    const x0 = section===0 ? 0 : 470;
+    const colorYear = section===0 ? c.orange : c.purple;
+    const max = Math.max(...dataRows.map(r=>r.quantity||0),1);
+    svg.appendChild(svgEl('text',{{x:x0,y:20,fill:colorYear,'font-size':18,'font-weight':950}})).textContent=periodLabel(year);
+    dataRows.forEach((r,i)=>{{
+      const y=44+i*38;
+      const isEdra=String(r.brand).toUpperCase()==='EDRA';
+      const color=isEdra?c.green:colorYear;
+      svg.appendChild(svgEl('text',{{x:x0,y:y+15,fill:isEdra?c.green:c.muted,'font-size':12,'font-weight':900}})).textContent='#'+r.rank;
+      svg.appendChild(svgEl('text',{{x:x0+44,y:y+15,fill:c.text,'font-size':12,'font-weight':900}})).textContent=String(r.brand).slice(0,12);
+      svg.appendChild(svgEl('rect',{{x:x0+150,y,width:220,height:20,rx:10,fill:'#24242d'}}));
+      svg.appendChild(svgEl('rect',{{class:'bar',x:x0+150,y,width:Math.max(2,220*(r.quantity||0)/max),height:20,rx:10,fill:color}}));
+      svg.appendChild(svgEl('text',{{x:x0+382,y:y+15,fill:color,'font-size':12,'font-weight':900}})).textContent=short(r.quantity||0);
+    }});
+  }});
   el(id).appendChild(svg);
 }}
 function rankingInfo(id, category) {{
-  const e = RANKING[category].edra;
-  const marketTotal = RANKING[category].rows.reduce((a,b)=>a+(b.quantity||0),0);
-  const share = marketTotal ? e.quantity / marketTotal : null;
-  el(id).innerHTML = `<div style="display:flex;gap:20px;align-items:center;margin-bottom:22px"><div class="rank-badge">#${{e.rank}}</div><div><div class="label">EDRA Rank</div><div class="num" style="font-size:38px;color:var(--green)">${{fmt(e.quantity)}}</div><div class="note">Total import quantity · 2025 + 5M2026</div></div></div><div class="metric-strip" style="grid-template-columns:1fr 1fr;margin-top:18px"><div class="mini-metric"><div class="label">Market Share</div><b>${{sharePct(share)}}</b><div class="note">EDRA / all ranked brands</div></div><div class="mini-metric"><div class="label">Brand-market Qty</div><b>${{short(marketTotal)}}</b><div class="note">${{fmt(marketTotal)}} units</div></div></div><p class="sub" style="margin-top:20px">EDRA ranks #${{e.rank}} in ${{category}}, with ${{sharePct(share)}} market share in the supplied import brand data.</p>`;
+  const items = [2025,2026].map(year=>{{ const block=rankBlock(category,year); return {{year, ...rankMarket(block)}}; }});
+  el(id).innerHTML = `<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">${{items.map((r,i)=>`
+    <div class="mini-metric" style="padding:16px">
+      <div class="label">${{periodLabel(r.year)}} EDRA Rank</div>
+      <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
+        <div class="rank-badge" style="width:66px;height:66px;border-radius:20px;font-size:24px;background:${{i===0?'linear-gradient(135deg,var(--orange),#ffb000)':'linear-gradient(135deg,var(--purple),#c084fc)'}}">#${{r.edra.rank || '-'}}</div>
+        <div><div style="font-size:28px;font-weight:950;color:var(--green)">${{fmt(r.edra.quantity||0)}}</div><div class="note">EDRA import qty</div></div>
+      </div>
+      <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
+        <div class="label">Market Share</div>
+        <div style="font-size:26px;font-weight:950;color:var(--green)">${{sharePct(r.share)}}</div>
+        <div class="note">of ${{short(r.marketTotal)}} brand-market units</div>
+      </div>
+    </div>`).join('')}}</div>
+    <p class="sub" style="margin-top:18px">Ranking and market share are calculated separately for 2025 and 5M2026, not combined.</p>`;
 }}
 function rankingMini(id, category) {{
-  const block = RANKING[category]; const e = block.edra; const leader = block.rows[0]; el(id).innerHTML=''; const svg=svgEl('svg',{{viewBox:'0 0 460 150'}});
-  const vals=[{{label:'Leader', value:leader.quantity, color:c.orange}}, {{label:'EDRA', value:e.quantity, color:c.green}}]; const max=Math.max(...vals.map(v=>v.value),1);
-  vals.forEach((v,i)=>{{ const y=30+i*48; svg.appendChild(svgEl('text',{{x:0,y:y+15,fill:c.text,'font-size':14,'font-weight':900}})).textContent=v.label; svg.appendChild(svgEl('rect',{{x:86,y,width:250,height:20,rx:10,fill:'#24242d'}})); svg.appendChild(svgEl('rect',{{class:'bar',x:86,y,width:Math.max(2,250*v.value/max),height:20,rx:10,fill:v.color}})); svg.appendChild(svgEl('text',{{x:352,y:y+15,fill:v.color,'font-size':13,'font-weight':900}})).textContent=short(v.value); }});
+  el(id).innerHTML='';
+  const svg=svgEl('svg',{{viewBox:'0 0 460 150'}});
+  [2025,2026].forEach((year,i)=>{{
+    const block=rankBlock(category,year); const leader=(block.rows||[])[0]||{{quantity:0,brand:'Leader'}}; const e=block.edra||{{quantity:0}};
+    const max=Math.max(leader.quantity||0,e.quantity||0,1); const y=24+i*62; const color=i===0?c.orange:c.purple;
+    svg.appendChild(svgEl('text',{{x:0,y:y+14,fill:color,'font-size':13,'font-weight':950}})).textContent=periodLabel(year);
+    svg.appendChild(svgEl('rect',{{x:88,y,width:210,height:16,rx:8,fill:'#24242d'}}));
+    svg.appendChild(svgEl('rect',{{class:'bar',x:88,y,width:Math.max(2,210*(leader.quantity||0)/max),height:16,rx:8,fill:color}}));
+    svg.appendChild(svgEl('rect',{{x:88,y:y+24,width:210,height:16,rx:8,fill:'#24242d'}}));
+    svg.appendChild(svgEl('rect',{{class:'bar',x:88,y:y+24,width:Math.max(2,210*(e.quantity||0)/max),height:16,rx:8,fill:c.green}}));
+    svg.appendChild(svgEl('text',{{x:312,y:y+14,fill:color,'font-size':12,'font-weight':900}})).textContent='Leader '+short(leader.quantity||0);
+    svg.appendChild(svgEl('text',{{x:312,y:y+38,fill:c.green,'font-size':12,'font-weight':900}})).textContent='EDRA '+short(e.quantity||0);
+  }});
   el(id).appendChild(svg);
 }}
 function rankSummary() {{
-  const summary = ['Keyboard','Mouse','Headset','Monitor'].map(cat=>{{ const marketTotal=RANKING[cat].rows.reduce((a,b)=>a+(b.quantity||0),0); return {{category:cat, marketTotal, share:marketTotal?RANKING[cat].edra.quantity/marketTotal:null, ...RANKING[cat].edra}}; }});
-  el('rankSummaryCards').innerHTML = `<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">${{summary.map((r,i)=>`
-    <div style="position:relative;min-height:390px;border:1px solid var(--line);border-radius:26px;padding:22px;background:linear-gradient(180deg,rgba(24,24,32,.95),rgba(10,10,14,.96));overflow:hidden">
+  const cats = ['Keyboard','Mouse','Headset','Monitor'];
+  el('rankSummaryCards').innerHTML = `<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">${{cats.map((cat,i)=>{{
+    const y2025=rankMarket(rankBlock(cat,2025)); const y2026=rankMarket(rankBlock(cat,2026));
+    return `<div style="position:relative;min-height:390px;border:1px solid var(--line);border-radius:26px;padding:18px;background:linear-gradient(180deg,rgba(24,24,32,.95),rgba(10,10,14,.96));overflow:hidden">
       <div style="position:absolute;right:-44px;top:-44px;width:150px;height:150px;border-radius:50%;background:${{i%2===0?'rgba(255,106,0,.18)':'rgba(139,92,246,.18)'}};filter:blur(2px)"></div>
-      <div class="label">${{r.category}}</div>
-      <div style="margin-top:20px;display:flex;align-items:center;justify-content:center">
-        <div style="width:120px;height:120px;border-radius:34px;background:linear-gradient(135deg,var(--orange),#ffb000);color:#111;display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:950;box-shadow:0 24px 70px rgba(255,106,0,.26)">#${{r.rank}}</div>
+      <div class="label">${{cat}}</div>
+      <div style="display:grid;gap:12px;margin-top:16px">
+        ${{[{{label:'2025', item:y2025, color:'var(--orange)'}},{{label:'5M2026', item:y2026, color:'var(--purple)'}}].map(p=>`
+          <div style="border:1px solid var(--line);border-radius:18px;padding:14px;background:#0b0b10">
+            <div class="label">${{p.label}}</div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:8px">
+              <div class="rank-badge" style="width:58px;height:58px;border-radius:18px;font-size:22px;background:${{p.color}}">#${{p.item.edra.rank||'-'}}</div>
+              <div><div style="font-weight:950;font-size:22px">${{short(p.item.edra.quantity||0)}}</div><div class="note">Share ${{sharePct(p.item.share)}}</div></div>
+            </div>
+          </div>`).join('')}}
       </div>
-      <div style="margin-top:22px;text-align:center">
-        <div class="label">EDRA Quantity</div>
-        <div class="num" style="font-size:36px;color:var(--text)">${{fmt(r.quantity)}}</div>
-        <div class="note" style="margin-top:10px">Total XNK · 2025 + 5M2026</div>
-        <div style="margin-top:16px;border-top:1px solid var(--line);padding-top:14px">
-          <div class="label">Market Share</div>
-          <div style="font-size:28px;font-weight:950;color:var(--green);margin-top:5px">${{sharePct(r.share)}}</div>
-          <div class="note">of ${{short(r.marketTotal)}} brand-market units</div>
-        </div>
-      </div>
-    </div>`).join('')}}</div>`;
-  el('rankSummaryCards').innerHTML += `<div style="margin-top:18px;border:1px solid var(--line);border-radius:18px;padding:14px 18px;color:var(--muted);font-size:14px">Detailed brand comparison continues in slides 09-12 for each product group.</div>`;
+    </div>`; }}).join('')}}</div>`;
+  el('rankSummaryCards').innerHTML += `<div style="margin-top:16px;border:1px solid var(--line);border-radius:18px;padding:12px 16px;color:var(--muted);font-size:14px">Ranking is separated by year/period: 2025 full year and 5M2026. No combined ranking is used on these slides.</div>`;
 }}
 function selloutRows() {{ return ['Keyboard','Mouse','Headset','Monitor','Chair'].map(cat=>{{ const r=SELLOUT.category_total.find(x=>x.category===cat)||{{sold_quantity:0}}; return {{category:cat, quantity:r.sold_quantity||0}}; }}); }}
 function selloutYearSplit() {{
