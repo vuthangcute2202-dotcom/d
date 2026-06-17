@@ -20,6 +20,14 @@ CATEGORY_KEYS = {
 }
 
 
+def month_from_header(value):
+    text = clean_text(value).upper()
+    if "THANG" not in text:
+        return None
+    digits = "".join(ch for ch in text if ch.isdigit())
+    return int(digits) if digits else None
+
+
 def clean_text(value):
     text = str(value).strip().lower()
     text = unicodedata.normalize("NFD", text)
@@ -45,7 +53,7 @@ def category_from_title(title):
 def parse_file(path, year):
     df = pd.read_excel(path, header=None)
     current = None
-    total_col = None
+    month_cols = {}
     rows = []
 
     for _, row in df.iterrows():
@@ -54,31 +62,30 @@ def parse_file(path, year):
             category = category_from_title(first)
             if category:
                 current = category
-                total_col = None
+                month_cols = {}
                 continue
 
             if clean_text(first) == "brands" and current:
-                total_col = None
-                for col, value in row.items():
-                    if clean_text(value) == "total":
-                        total_col = col
-                        break
+                month_cols = {
+                    col: month_from_header(value)
+                    for col, value in row.items()
+                    if month_from_header(value)
+                }
                 continue
 
-        if current and total_col is not None and pd.notna(first):
+        if current and month_cols and pd.notna(first):
             brand = str(first).strip().upper().replace("E-DRA", "EDRA")
             if not brand or brand in ["TOTAL", "NAN"]:
                 continue
-            qty = pd.to_numeric(row.iloc[total_col], errors="coerce")
-            if pd.notna(qty):
-                rows.append(
-                    {
-                        "year": year,
-                        "category": current,
-                        "brand": brand,
-                        "quantity": float(qty),
-                    }
-                )
+            qty = 0.0
+            has_value = False
+            for col in month_cols:
+                value = pd.to_numeric(row.iloc[col], errors="coerce")
+                if pd.notna(value):
+                    qty += float(value)
+                    has_value = True
+            if has_value:
+                rows.append({"year": year, "category": current, "brand": brand, "quantity": qty})
     return rows
 
 

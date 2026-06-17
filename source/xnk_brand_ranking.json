@@ -2,139 +2,139 @@
   "Headset": {
     "rows": [
       {
-        "brand": "DAREU",
-        "quantity": 79868.0,
+        "brand": "HP",
+        "quantity": 111393.0,
         "rank": 1
       },
       {
-        "brand": "LOGITECH",
-        "quantity": 77122.0,
+        "brand": "DAREU",
+        "quantity": 105205.0,
         "rank": 2
       },
       {
-        "brand": "HP",
-        "quantity": 60081.0,
+        "brand": "LOGITECH",
+        "quantity": 103832.0,
         "rank": 3
       },
       {
         "brand": "HYPERX",
-        "quantity": 32569.0,
+        "quantity": 53952.0,
         "rank": 4
       },
       {
-        "brand": "EDRA",
-        "quantity": 31528.0,
+        "brand": "RAPOO",
+        "quantity": 46867.0,
         "rank": 5
       },
       {
-        "brand": "G-NET",
-        "quantity": 26936.0,
+        "brand": "EDRA",
+        "quantity": 39511.0,
         "rank": 6
       },
       {
-        "brand": "RAPOO",
-        "quantity": 25231.0,
+        "brand": "G-NET",
+        "quantity": 33184.0,
         "rank": 7
       },
       {
         "brand": "RAZER",
-        "quantity": 7168.0,
+        "quantity": 13949.0,
         "rank": 8
       },
       {
-        "brand": "FUHLEN",
-        "quantity": 7000.0,
+        "brand": "ZIDLI",
+        "quantity": 13059.0,
         "rank": 9
       },
       {
         "brand": "ASUS",
-        "quantity": 4363.0,
+        "quantity": 8227.0,
         "rank": 10
       },
       {
-        "brand": "ZIDLI",
-        "quantity": 3955.0,
+        "brand": "FUHLEN",
+        "quantity": 7000.0,
         "rank": 11
       },
       {
         "brand": "CORSAIR",
-        "quantity": 2238.0,
+        "quantity": 3388.0,
         "rank": 12
       }
     ],
     "edra": {
       "brand": "EDRA",
-      "quantity": 31528.0,
-      "rank": 5
+      "quantity": 39511.0,
+      "rank": 6
     },
     "by_year": {
       "2025": {
         "rows": [
           {
             "brand": "LOGITECH",
-            "quantity": 47604.0,
+            "quantity": 74314.0,
             "rank": 1
           },
           {
             "brand": "DAREU",
-            "quantity": 44307.0,
+            "quantity": 69644.0,
             "rank": 2
           },
           {
-            "brand": "EDRA",
-            "quantity": 20528.0,
+            "brand": "HP",
+            "quantity": 58282.0,
             "rank": 3
           },
           {
-            "brand": "G-NET",
-            "quantity": 17844.0,
+            "brand": "RAPOO",
+            "quantity": 35438.0,
             "rank": 4
           },
           {
-            "brand": "RAPOO",
-            "quantity": 13802.0,
+            "brand": "HYPERX",
+            "quantity": 33007.0,
             "rank": 5
           },
           {
-            "brand": "HYPERX",
-            "quantity": 11624.0,
+            "brand": "EDRA",
+            "quantity": 28511.0,
             "rank": 6
+          },
+          {
+            "brand": "G-NET",
+            "quantity": 24092.0,
+            "rank": 7
+          },
+          {
+            "brand": "ZIDLI",
+            "quantity": 13055.0,
+            "rank": 8
+          },
+          {
+            "brand": "RAZER",
+            "quantity": 9202.0,
+            "rank": 9
           },
           {
             "brand": "FUHLEN",
             "quantity": 7000.0,
-            "rank": 7
-          },
-          {
-            "brand": "HP",
-            "quantity": 6970.0,
-            "rank": 8
-          },
-          {
-            "brand": "ZIDLI",
-            "quantity": 3951.0,
-            "rank": 9
-          },
-          {
-            "brand": "ASUS",
-            "quantity": 3085.0,
             "rank": 10
           },
           {
-            "brand": "RAZER",
-            "quantity": 2421.0,
+            "brand": "ASUS",
+            "quantity": 6949.0,
             "rank": 11
           },
           {
             "brand": "CORSAIR",
-            "quantity": 1241.0,
+            "quantity": 2391.0,
             "rank": 12
           }
         ],
         "edra": {
           "brand": "EDRA",
-          "quantity": 20528.0,
-          "rank": 3
+          "quantity": 28511.0,
+          "rank": 6
         }
       },
       "2026": {
@@ -212,68 +212,68 @@
     "rows": [
       {
         "brand": "LOGITECH",
-        "quantity": 445354.0,
+        "quantity": 561423.0,
         "rank": 1
       },
       {
         "brand": "DAREU",
-        "quantity": 268720.0,
+        "quantity": 369887.0,
         "rank": 2
       },
       {
         "brand": "FUHLEN",
-        "quantity": 260704.0,
+        "quantity": 365910.0,
         "rank": 3
       },
       {
         "brand": "AULA",
-        "quantity": 114683.0,
+        "quantity": 154950.0,
         "rank": 4
       },
       {
         "brand": "EDRA",
-        "quantity": 102782.0,
+        "quantity": 129704.0,
         "rank": 5
       },
       {
         "brand": "DELL",
-        "quantity": 79886.0,
+        "quantity": 117903.0,
         "rank": 6
       },
       {
-        "brand": "NEWMEN",
-        "quantity": 52148.0,
+        "brand": "RAPOO",
+        "quantity": 76959.0,
         "rank": 7
       },
       {
-        "brand": "RAPOO",
-        "quantity": 46138.0,
+        "brand": "NEWMEN",
+        "quantity": 61022.0,
         "rank": 8
       },
       {
         "brand": "HP",
-        "quantity": 32318.0,
+        "quantity": 40707.0,
         "rank": 9
       },
       {
-        "brand": "ASUS",
-        "quantity": 17127.0,
+        "brand": "AKKO",
+        "quantity": 23352.0,
         "rank": 10
       },
       {
-        "brand": "AKKO",
-        "quantity": 16468.0,
+        "brand": "ASUS",
+        "quantity": 22956.0,
         "rank": 11
       },
       {
         "brand": "G-NET",
-        "quantity": 14731.0,
+        "quantity": 19441.0,
         "rank": 12
       }
     ],
     "edra": {
       "brand": "EDRA",
-      "quantity": 102782.0,
+      "quantity": 129704.0,
       "rank": 5
     },
     "by_year": {
@@ -281,68 +281,68 @@
         "rows": [
           {
             "brand": "LOGITECH",
-            "quantity": 294070.0,
+            "quantity": 410139.0,
             "rank": 1
           },
           {
-            "brand": "DAREU",
-            "quantity": 176511.0,
+            "brand": "FUHLEN",
+            "quantity": 278881.0,
             "rank": 2
           },
           {
-            "brand": "FUHLEN",
-            "quantity": 173675.0,
+            "brand": "DAREU",
+            "quantity": 277678.0,
             "rank": 3
           },
           {
             "brand": "AULA",
-            "quantity": 70578.0,
+            "quantity": 110845.0,
             "rank": 4
           },
           {
             "brand": "EDRA",
-            "quantity": 70431.0,
+            "quantity": 97353.0,
             "rank": 5
           },
           {
-            "brand": "RAPOO",
-            "quantity": 36471.0,
+            "brand": "DELL",
+            "quantity": 71202.0,
             "rank": 6
           },
           {
-            "brand": "DELL",
-            "quantity": 33185.0,
+            "brand": "RAPOO",
+            "quantity": 67292.0,
             "rank": 7
           },
           {
             "brand": "NEWMEN",
-            "quantity": 25948.0,
+            "quantity": 34822.0,
             "rank": 8
           },
           {
             "brand": "HP",
-            "quantity": 15890.0,
+            "quantity": 24279.0,
             "rank": 9
           },
           {
             "brand": "ASUS",
-            "quantity": 13881.0,
+            "quantity": 19710.0,
             "rank": 10
           },
           {
-            "brand": "G-NET",
-            "quantity": 11430.0,
+            "brand": "AKKO",
+            "quantity": 18163.0,
             "rank": 11
           },
           {
-            "brand": "AKKO",
-            "quantity": 11279.0,
+            "brand": "G-NET",
+            "quantity": 16140.0,
             "rank": 12
           }
         ],
         "edra": {
           "brand": "EDRA",
-          "quantity": 70431.0,
+          "quantity": 97353.0,
           "rank": 5
         }
       },
@@ -421,68 +421,68 @@
     "rows": [
       {
         "brand": "DELL",
-        "quantity": 388955.0,
+        "quantity": 433945.0,
         "rank": 1
       },
       {
-        "brand": "SAMSUNG",
-        "quantity": 206664.0,
+        "brand": "LG",
+        "quantity": 262347.37,
         "rank": 2
       },
       {
         "brand": "HP",
-        "quantity": 199837.0,
+        "quantity": 227620.0,
         "rank": 3
       },
       {
-        "brand": "LG",
-        "quantity": 199418.0,
+        "brand": "SAMSUNG",
+        "quantity": 225792.0,
         "rank": 4
       },
       {
         "brand": "ASUS",
-        "quantity": 195386.0,
+        "quantity": 217600.0,
         "rank": 5
       },
       {
-        "brand": "MSI",
-        "quantity": 178305.0,
+        "brand": "VSP",
+        "quantity": 203359.0,
         "rank": 6
       },
       {
-        "brand": "VSP",
-        "quantity": 174371.0,
+        "brand": "MSI",
+        "quantity": 201757.0,
         "rank": 7
       },
       {
         "brand": "VIEWSONIC",
-        "quantity": 160456.0,
+        "quantity": 193345.0,
         "rank": 8
       },
       {
         "brand": "EDRA",
-        "quantity": 143620.0,
+        "quantity": 160989.0,
         "rank": 9
       },
       {
-        "brand": "DAHUA",
-        "quantity": 102267.0,
+        "brand": "HIKVISION",
+        "quantity": 122483.0,
         "rank": 10
       },
       {
         "brand": "LENOVO",
-        "quantity": 98664.0,
+        "quantity": 113959.0,
         "rank": 11
       },
       {
-        "brand": "HIKVISION",
-        "quantity": 97867.0,
+        "brand": "AOC",
+        "quantity": 108997.0,
         "rank": 12
       }
     ],
     "edra": {
       "brand": "EDRA",
-      "quantity": 143620.0,
+      "quantity": 160989.0,
       "rank": 9
     },
     "by_year": {
@@ -490,68 +490,68 @@
         "rows": [
           {
             "brand": "DELL",
-            "quantity": 245341.0,
+            "quantity": 290331.0,
             "rank": 1
           },
           {
             "brand": "LG",
-            "quantity": 148188.0,
+            "quantity": 211117.37,
             "rank": 2
           },
           {
             "brand": "SAMSUNG",
-            "quantity": 135687.0,
+            "quantity": 154815.0,
             "rank": 3
           },
           {
-            "brand": "ASUS",
-            "quantity": 121069.0,
+            "brand": "VSP",
+            "quantity": 144462.0,
             "rank": 4
           },
           {
-            "brand": "VSP",
-            "quantity": 115474.0,
+            "brand": "ASUS",
+            "quantity": 143283.0,
             "rank": 5
           },
           {
-            "brand": "MSI",
-            "quantity": 109937.0,
+            "brand": "VIEWSONIC",
+            "quantity": 135257.0,
             "rank": 6
           },
           {
             "brand": "HP",
-            "quantity": 107360.0,
+            "quantity": 135143.0,
             "rank": 7
           },
           {
-            "brand": "VIEWSONIC",
-            "quantity": 102368.0,
+            "brand": "MSI",
+            "quantity": 133389.0,
             "rank": 8
           },
           {
             "brand": "EDRA",
-            "quantity": 82724.0,
+            "quantity": 100093.0,
             "rank": 9
           },
           {
-            "brand": "DAHUA",
-            "quantity": 81497.0,
+            "brand": "HIKVISION",
+            "quantity": 92351.0,
             "rank": 10
           },
           {
-            "brand": "HIKVISION",
-            "quantity": 67735.0,
+            "brand": "DAHUA",
+            "quantity": 83580.0,
             "rank": 11
           },
           {
-            "brand": "LENOVO",
-            "quantity": 59660.0,
+            "brand": "AOC",
+            "quantity": 78905.0,
             "rank": 12
           }
         ],
         "edra": {
           "brand": "EDRA",
-          "quantity": 82724.0,
+          "quantity": 100093.0,
           "rank": 9
         }
       },
@@ -630,68 +630,68 @@
     "rows": [
       {
         "brand": "LOGITECH",
-        "quantity": 13197910.0,
+        "quantity": 17945507.0,
         "rank": 1
       },
       {
         "brand": "HP",
-        "quantity": 3289736.0,
+        "quantity": 3686798.0,
         "rank": 2
       },
       {
         "brand": "FUHLEN",
-        "quantity": 672447.0,
+        "quantity": 917566.0,
         "rank": 3
       },
       {
         "brand": "DAREU",
-        "quantity": 612594.0,
+        "quantity": 843449.0,
         "rank": 4
       },
       {
         "brand": "RAPOO",
-        "quantity": 479934.0,
+        "quantity": 608213.0,
         "rank": 5
       },
       {
         "brand": "DELL",
-        "quantity": 150101.0,
+        "quantity": 189010.0,
         "rank": 6
       },
       {
         "brand": "EDRA",
-        "quantity": 120548.0,
+        "quantity": 139940.0,
         "rank": 7
       },
       {
         "brand": "NEWMEN",
-        "quantity": 120301.0,
+        "quantity": 127263.0,
         "rank": 8
       },
       {
         "brand": "AULA",
-        "quantity": 61748.0,
+        "quantity": 78977.0,
         "rank": 9
       },
       {
         "brand": "RAZER",
-        "quantity": 46522.0,
+        "quantity": 68246.0,
         "rank": 10
       },
       {
         "brand": "ASUS",
-        "quantity": 38765.0,
+        "quantity": 52915.0,
         "rank": 11
       },
       {
         "brand": "AKKO",
-        "quantity": 7899.0,
+        "quantity": 9370.0,
         "rank": 12
       }
     ],
     "edra": {
       "brand": "EDRA",
-      "quantity": 120548.0,
+      "quantity": 139940.0,
       "rank": 7
     },
     "by_year": {
@@ -699,69 +699,69 @@
         "rows": [
           {
             "brand": "LOGITECH",
-            "quantity": 7485344.0,
+            "quantity": 12232941.0,
             "rank": 1
           },
           {
             "brand": "HP",
-            "quantity": 2752244.0,
+            "quantity": 3149306.0,
             "rank": 2
           },
           {
             "brand": "FUHLEN",
-            "quantity": 408051.0,
+            "quantity": 653170.0,
             "rank": 3
           },
           {
             "brand": "DAREU",
-            "quantity": 338382.0,
+            "quantity": 569237.0,
             "rank": 4
           },
           {
             "brand": "RAPOO",
-            "quantity": 295311.0,
+            "quantity": 423590.0,
             "rank": 5
           },
           {
-            "brand": "NEWMEN",
-            "quantity": 69299.0,
+            "brand": "DELL",
+            "quantity": 107516.0,
             "rank": 6
           },
           {
-            "brand": "DELL",
-            "quantity": 68607.0,
+            "brand": "EDRA",
+            "quantity": 80219.0,
             "rank": 7
           },
           {
-            "brand": "EDRA",
-            "quantity": 60827.0,
+            "brand": "NEWMEN",
+            "quantity": 76261.0,
             "rank": 8
           },
           {
             "brand": "RAZER",
-            "quantity": 30073.0,
+            "quantity": 51797.0,
             "rank": 9
           },
           {
             "brand": "ASUS",
-            "quantity": 26396.0,
+            "quantity": 40546.0,
             "rank": 10
           },
           {
             "brand": "AULA",
-            "quantity": 15942.0,
+            "quantity": 33171.0,
             "rank": 11
           },
           {
-            "brand": "CORSAIR",
-            "quantity": 2765.0,
+            "brand": "G-NET",
+            "quantity": 4020.0,
             "rank": 12
           }
         ],
         "edra": {
           "brand": "EDRA",
-          "quantity": 60827.0,
-          "rank": 8
+          "quantity": 80219.0,
+          "rank": 7
         }
       },
       "2026": {
