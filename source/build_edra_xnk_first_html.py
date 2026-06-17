@@ -763,6 +763,19 @@ function applyEdits() {{
     if(src) box.innerHTML = `<img src="${{src}}" alt="${{box.dataset.imageKey}}">`;
   }});
 }}
+function applyEmbeddedEditStore() {{
+  const embedded = document.getElementById('embeddedEditStore');
+  if(!embedded) return;
+  try {{
+    const parsed = JSON.parse(embedded.textContent || '{{}}');
+    parsed.texts = parsed.texts || {{}};
+    parsed.images = parsed.images || {{}};
+    editStore = parsed;
+    try {{ localStorage.setItem(EDIT_KEY, JSON.stringify(editStore)); }} catch(e) {{}}
+  }} catch(e) {{
+    console.warn('Embedded edits could not be loaded', e);
+  }}
+}}
 function setEditMode(on) {{
   editMode = on;
   document.body.classList.toggle('editing', editMode);
@@ -843,9 +856,9 @@ function exportEdits() {{
 }}
 function downloadEditedHtml() {{
   saveEdits(false);
-  const marker = 'render(); applyEdits(); nav();';
-  const embedded = `localStorage.setItem(EDIT_KEY, ${{JSON.stringify(JSON.stringify(editStore)).replace(/<\\//g,'<\\\\/')}}); render(); applyEdits(); nav();`;
-  const html = BASE_HTML_SOURCE.includes(marker) ? BASE_HTML_SOURCE.replace(marker, embedded) : document.documentElement.outerHTML;
+  const json = JSON.stringify(editStore).replace(/<\\//g, '<\\\\/');
+  let html = BASE_HTML_SOURCE.replace(/<script id="embeddedEditStore" type="application\\/json">[\\s\\S]*?<\\/script>\\s*/,'');
+  html = html.replace('<script>\\nconst DATA', `<script id="embeddedEditStore" type="application/json">${{json}}</script>\\n<script>\\nconst DATA`);
   const blob = new Blob(['<!doctype html>\\n' + html], {{type:'text/html'}});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -968,7 +981,7 @@ document.addEventListener('keydown',e=>{{
   if(e.key && e.key.toLowerCase()==='e') toggleEditMode();
   if(e.key && e.key.toLowerCase()==='p') togglePresentMode();
 }});
-render(); applyEdits(); nav();
+render(); applyEmbeddedEditStore(); applyEdits(); nav();
 bindEditorButtons();
 </script>
 </body>
