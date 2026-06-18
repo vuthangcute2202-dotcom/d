@@ -53,6 +53,8 @@ table {{ width:100%; border-collapse:collapse; font-size:15px; }} th,td {{ paddi
 .nav {{ position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:9; display:flex; gap:8px; padding:8px 12px; border:1px solid #383842; background:rgba(0,0,0,.68); border-radius:999px; }}
 .dot {{ width:9px; height:9px; border:0; border-radius:50%; background:#555565; cursor:pointer; }} .dot.active {{ width:28px; border-radius:999px; background:var(--orange); }}
 .arrow {{ position:fixed; top:50%; transform:translateY(-50%); z-index:9; width:46px; height:46px; border-radius:50%; border:1px solid #383842; background:rgba(0,0,0,.7); color:white; font-size:24px; cursor:pointer; }} .prev {{ left:16px; }} .next {{ right:16px; }}
+.slide-helper {{ position:fixed; right:18px; top:18px; z-index:10; display:flex; gap:8px; align-items:center; padding:8px 10px; border:1px solid #383842; border-radius:999px; background:rgba(0,0,0,.72); color:#fff; font-size:12px; font-weight:900; backdrop-filter:blur(10px); }}
+.slide-helper button {{ border:0; border-radius:999px; padding:8px 11px; background:var(--orange); color:#111; font-weight:950; cursor:pointer; }}
 .edit-toolbar {{ position:fixed; right:18px; bottom:18px; z-index:99999; display:flex; gap:8px; align-items:center; padding:8px; border:1px solid #464652; border-radius:999px; background:rgba(0,0,0,.72); backdrop-filter:blur(12px); box-shadow:0 18px 55px rgba(0,0,0,.45); pointer-events:auto; }}
 .edit-toolbar button {{ border:1px solid #3a3a44; background:#111119; color:#fff; border-radius:999px; padding:9px 12px; font-size:12px; font-weight:950; cursor:pointer; pointer-events:auto; }}
 .edit-toolbar button.primary {{ background:var(--orange); color:#111; border-color:var(--orange); }}
@@ -86,7 +88,7 @@ body.presenting .product-slide .product-info-card > .label,
 body.presenting .product-slide .product-info-card > div > .label {{ display:none!important; }}
 body.presenting .product-image-grid .editable-image:not(:has(img)) {{ display:none!important; }}
 body.presenting .product-image-grid {{ grid-template-rows:none; grid-auto-rows:1fr; align-content:center; }}
-body.exporting .nav, body.exporting .arrow, body.exporting .edit-toolbar, body.exporting .edit-status {{ display:none!important; }}
+body.exporting .nav, body.exporting .arrow, body.exporting .slide-helper, body.exporting .edit-toolbar, body.exporting .edit-status {{ display:none!important; }}
 .placeholder {{ border:2px dashed #4b5563; border-radius:24px; min-height:360px; display:flex; align-items:center; justify-content:center; color:var(--muted); text-align:center; font-size:18px; line-height:1.5; padding:22px; }}
 .rank-badge {{ display:inline-flex; align-items:center; justify-content:center; width:88px; height:88px; border-radius:24px; background:linear-gradient(135deg,var(--orange),#ffb000); color:#111; font-size:34px; font-weight:950; box-shadow:0 18px 60px rgba(255,106,0,.28); }}
 .metric-strip {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }}
@@ -102,11 +104,12 @@ body.exporting .nav, body.exporting .arrow, body.exporting .edit-toolbar, body.e
 .product-preview-item .qty {{ color:var(--orange); font-weight:950; font-size:16px; }}
 .glow-card {{ position:relative; overflow:hidden; }}
 .glow-card:after {{ content:""; position:absolute; right:-70px; bottom:-70px; width:210px; height:210px; border-radius:50%; background:rgba(255,106,0,.16); filter:blur(8px); }}
-@media (max-width:1000px) {{ body {{ overflow:auto; }} .slides {{ display:block; transform:none!important; height:auto; }} .slide {{ height:auto; min-height:100vh; }} .two,.three,.kpis {{ grid-template-columns:1fr; }} .nav,.arrow {{ display:none; }} }}
+@media (max-width:1000px) {{ .content {{ width:100vw; height:56.25vw; min-height:620px; padding:28px 42px 28px; }} .two,.three,.kpis {{ grid-template-columns:1fr; }} .slide-helper {{ top:auto; bottom:64px; right:14px; }} }}
 </style>
 </head>
 <body>
 <button class="arrow prev" onclick="go(-1)">‹</button><button class="arrow next" onclick="go(1)">›</button>
+<div class="slide-helper"><button type="button" onclick="go(-1)">Prev</button><span id="slideCounter">1 / 1</span><button type="button" onclick="go(1)">Next</button></div>
 <div class="edit-toolbar">
   <button class="primary" id="editToggle" type="button">Edit</button>
   <div class="edit-extra">
@@ -960,7 +963,12 @@ function clearEdits() {{
 function nav() {{ const n=el('nav'); document.querySelectorAll('.slide').forEach((_,i)=>{{ const b=document.createElement('button'); b.className='dot'; b.onclick=()=>goTo(i); n.appendChild(b); }}); update(); }}
 function go(d) {{ const count=document.querySelectorAll('.slide').length; goTo(Math.max(0,Math.min(count-1,current+d))); }}
 function goTo(i) {{ current=i; el('slides').style.transform=`translateX(${{-100*i}}vw)`; update(); }}
-function update() {{ [...el('nav').children].forEach((b,i)=>b.classList.toggle('active',i===current)); }}
+function update() {{
+  const count=document.querySelectorAll('.slide').length;
+  [...el('nav').children].forEach((b,i)=>b.classList.toggle('active',i===current));
+  const counter=el('slideCounter');
+  if(counter) counter.textContent = `${{current+1}} / ${{count}}`;
+}}
 function bindEditorButtons() {{
   const bind = (id, fn) => {{ const btn=document.getElementById(id); if(btn) btn.addEventListener('click', e=>{{ e.preventDefault(); e.stopPropagation(); fn(); }}); }};
   bind('editToggle', toggleEditMode);
@@ -980,9 +988,18 @@ document.addEventListener('keydown',e=>{{
   if(e.target && e.target.isContentEditable) return;
   if(e.key==='ArrowRight')go(1);
   if(e.key==='ArrowLeft')go(-1);
+  if(e.key===' ' || e.key==='PageDown') {{ e.preventDefault(); go(1); }}
+  if(e.key==='PageUp') {{ e.preventDefault(); go(-1); }}
   if(e.key && e.key.toLowerCase()==='e') toggleEditMode();
   if(e.key && e.key.toLowerCase()==='p') togglePresentMode();
 }});
+let wheelLock=false;
+document.addEventListener('wheel', e=>{{
+  if(editMode || wheelLock || Math.abs(e.deltaY) < 20) return;
+  wheelLock=true;
+  go(e.deltaY > 0 ? 1 : -1);
+  setTimeout(()=>wheelLock=false, 520);
+}}, {{passive:true}});
 render(); applyEmbeddedEditStore(); applyEdits(); nav();
 bindEditorButtons();
 </script>
